@@ -63,6 +63,46 @@ antes de confiar en lo que se ve.
   desde `portofolio.html` (miniaturas ya actualizadas con las capturas
   reales).
 
+## Paleta de color (2026-09-26)
+Rodolfo pidió cambiar la paleta por defecto de Reboost (negro + verde neón)
+por una inspirada en la referencia "Malina Clubhouse" (índigo + blush +
+coral), mezclada con blanco puro. Verificado contraste WCAG antes de
+aplicar (fórmula de luminancia relativa, no a ojo):
+
+- Blanco (#FFFFFF) sobre índigo (#2A2496): 11.7:1 — AAA, texto de
+  cualquier tamaño.
+- Blush (#F4C9C7) sobre índigo: 7.8:1 — AAA, seguro incluso en texto
+  chico (nav, listas).
+- Coral (#E8604A) sobre índigo: 3.46:1 — pasa AA solo para texto
+  grande/UI (botones, iconos), **no** para texto de cuerpo chico.
+
+Mapeo aplicado en `css/style.css` (`:root`):
+- `--background-color`: índigo #2A2496 (antes negro #0A0A0A)
+- `--text-color`: blanco puro #FFFFFF (antes #F5F5F5)
+- `--text-color-2`, `--accent-color`, `--accent-color-3`: blush #F4C9C7
+  (roles de texto secundario/links/listas — los que en el template
+  original cargan más texto chico, por eso van con el color de más
+  contraste)
+- `--accent-color-2`: coral claro/durazno #F2957F (hover states)
+- `--accent-color-4`: coral #E8604A (botones y CTAs grandes, nunca texto
+  chico)
+- `--color-1/-2`: variantes más oscuras de índigo (paneles/tarjetas
+  oscuras)
+- `--color-3`, `--background-team`: tinte claro blush-blanco (paneles
+  claros)
+
+Efecto colateral corregido: el texto de fondo gigante decorativo
+(`.text-accent`, ej. "SOBRE MÍ" detrás de los títulos) usaba un degradado
+gris-a-negro pensado para casi desaparecer sobre el fondo casi-negro
+original — sobre índigo se veía como un bloque negro sólido. Ajustado el
+degradado a tonos de índigo cercanos al fondo para que vuelva a fundirse
+igual que antes.
+
+Verificado visualmente en index.html y portofolio.html (incluye tarjetas
+con overlay y botones circulares) — todo legible y coherente. Los hex son
+aproximados a ojo desde la referencia, no sampleados exactos (mismo
+criterio que el banco de paletas.md del registro de negocio).
+
 ## Pendiente (próxima pasada)
 1. Textual Showcase, sección Portafolio (tarjetas con caso Vitelia real,
    sin precio ni parentesco — ver reglas en CLAUDE.md), "Why Choose Us"

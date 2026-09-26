@@ -81,18 +81,21 @@
 /*  Custom Properties            */
 /* ---------------------------- */
 :root {
-    --text-color: #F5F5F5;
-    --text-color-2: #5F5F5F;
-    --background-color: #0A0A0A;
-    --background-team: #E3E3E3;
-    --accent-color: #C9F22C;
-    --accent-color-2: #F8C02D;
-    --accent-color-3: #F332BA;
-    --accent-color-4: #323AED;
-    --color-1: #292929;
-    --color-2: #141414;
-    --color-3: #D2D2D2;
-    --color-4: #595FEF;
+    /* Paleta "Malina" (ref. Malina Clubhouse) — índigo + blush + coral + blanco puro.
+       Blanco y blush verificados en AA (11.7:1 y 7.8:1 sobre el fondo índigo);
+       el coral (3.46:1) se reserva para botones/CTAs grandes, nunca texto chico. */
+    --text-color: #FFFFFF;
+    --text-color-2: #F4C9C7;
+    --background-color: #2A2496;
+    --background-team: #F1E3E1;
+    --accent-color: #F4C9C7;
+    --accent-color-2: #F2957F;
+    --accent-color-3: #F4C9C7;
+    --accent-color-4: #E8604A;
+    --color-1: #201B70;
+    --color-2: #16123F;
+    --color-3: #F3E8E6;
+    --color-4: #4B44C4;
     --font-1: "Poppins", sans-serif;
     --font-2: "Space Grotesk", sans-serif;
 }
@@ -170,14 +173,14 @@ img {
 }
 
 .text-accent {
-    background: linear-gradient(90deg, #5F5F5F 0%, #212121 100%);
+    background: linear-gradient(90deg, #3D36B8 0%, #2A2496 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .text-accent.second {
-    background: linear-gradient(90deg, #0D0D0D 0%, #141414 100%);
+    background: linear-gradient(90deg, #221D85 0%, #2A2496 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -192,7 +195,7 @@ img {
     /* geser sedikit ke bawah */
     width: 100%;
     height: 5px;
-    background: linear-gradient(90deg, #0D0D0D 0%, #141414 100%);
+    background: linear-gradient(90deg, #221D85 0%, #2A2496 100%);
 }
 
 .price-text {
