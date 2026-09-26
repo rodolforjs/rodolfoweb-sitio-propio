@@ -49,6 +49,20 @@ Para futuras verificaciones de este proyecto, evitar puertos ya usados
 por otros proyectos de este Mac o limpiar el service worker del origin
 antes de confiar en lo que se ve.
 
+## Páginas de detalle del portafolio (2026-09-26)
+- Capturas reales tomadas en vivo: clinicavitelia.cl (hero + tratamientos) y
+  rodolforjs.github.io/rodolforojas (hero + "En Cartelera"), guardadas en
+  `image/portfolio/`.
+- `portofolio-detail.html` reescrito para el caso Clínica Vitelia: proceso,
+  qué incluye, resultado, link real al sitio (clinicavitelia.cl).
+- Nueva página `portofolio-detail-personal.html` (duplicada del template
+  de detalle) para el caso "Mi Portafolio": proyecto propio de diseño+
+  desarrollo completo (no cliente pagado, aclarado en el copy), con link
+  real a rodolforjs.github.io/rodolforojas.
+- Ambas páginas se linkean cruzadas entre sí ("Otro Caso" en el sidebar) y
+  desde `portofolio.html` (miniaturas ya actualizadas con las capturas
+  reales).
+
 ## Pendiente (próxima pasada)
 1. Textual Showcase, sección Portafolio (tarjetas con caso Vitelia real,
    sin precio ni parentesco — ver reglas en CLAUDE.md), "Why Choose Us"
