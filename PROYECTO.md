@@ -31,14 +31,13 @@ ecommerce próximamente).
 
 **Corrección ética aplicada sin fabricar datos:** Reboost trae de fábrica
 un badge "4.9 Star Reviewer" (rating falso) — reemplazado por "1er caso /
-En producción", honesto para una agencia recién creada. NO se tradujeron
-ni se dejaron los testimonios con nombres inventados (Michael Carter,
-Robert Evans, etc.) ni las estadísticas "120/200 Completed Projects" /
-"15 Years Experience" más abajo en la página — **pendiente de decisión
-con Rodolfo**: ocultar esas secciones vía CSS (mismo patrón usado en
-Vitelia para el footer mobile) hasta tener métricas/reviews reales, o
-reemplazarlas por algo honesto de agencia nueva. No fabricar cifras ni
-reviews.
+En producción", honesto para una agencia recién creada.
+
+Los testimonios con nombres inventados (Michael Carter, Robert Evans,
+etc.) y las estadísticas "120/200 Completed Projects" / "15 Years
+Experience" más abajo en la página: **decisión explícita de Rodolfo
+(2026-09-26): dejarlos tal cual (en inglés, demo) por ahora, se revisan
+más adelante.** No tocar sin que él lo pida.
 
 **Nota técnica de verificación:** al levantar el servidor local en el
 puerto 8791 (mismo puerto usado antes para el proyecto Vitelia/Intrio en
