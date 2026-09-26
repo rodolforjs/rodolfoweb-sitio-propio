@@ -81,21 +81,23 @@
 /*  Custom Properties            */
 /* ---------------------------- */
 :root {
-    /* Paleta "Malina" (ref. Malina Clubhouse) — índigo + blush + coral + blanco puro.
-       Blanco y blush verificados en AA (11.7:1 y 7.8:1 sobre el fondo índigo);
-       el coral (3.46:1) se reserva para botones/CTAs grandes, nunca texto chico. */
+    /* Paleta monocromática azul-violeta (Catacean Blue/Han Purple/Violets are
+       Blue/Bright Lavender) + blanco puro. Bright Lavender es el color
+       protagonista (botones, CTAs, links) — verificado 7.87:1 sobre el fondo
+       Catacean, seguro incluso como texto chico. Han Purple se reserva para
+       fondos de bloques grandes (8.07:1 con texto blanco encima). */
     --text-color: #FFFFFF;
-    --text-color-2: #F4C9C7;
-    --background-color: #2A2496;
-    --background-team: #F1E3E1;
-    --accent-color: #F4C9C7;
-    --accent-color-2: #F2957F;
-    --accent-color-3: #F4C9C7;
-    --accent-color-4: #E8604A;
-    --color-1: #201B70;
-    --color-2: #16123F;
-    --color-3: #F3E8E6;
-    --color-4: #4B44C4;
+    --text-color-2: #C092F1;
+    --background-color: #010245;
+    --background-team: #F1E9FC;
+    --accent-color: #C092F1;
+    --accent-color-2: #7F58F0;
+    --accent-color-3: #C092F1;
+    --accent-color-4: #3C1DEE;
+    --color-1: #0A0864;
+    --color-2: #000122;
+    --color-3: #F1E9FC;
+    --color-4: #7F58F0;
     --font-1: "Poppins", sans-serif;
     --font-2: "Space Grotesk", sans-serif;
 }
@@ -173,14 +175,14 @@ img {
 }
 
 .text-accent {
-    background: linear-gradient(90deg, #3D36B8 0%, #2A2496 100%);
+    background: linear-gradient(90deg, #140F5E 0%, #010245 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .text-accent.second {
-    background: linear-gradient(90deg, #221D85 0%, #2A2496 100%);
+    background: linear-gradient(90deg, #05033A 0%, #010245 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -195,7 +197,7 @@ img {
     /* geser sedikit ke bawah */
     width: 100%;
     height: 5px;
-    background: linear-gradient(90deg, #221D85 0%, #2A2496 100%);
+    background: linear-gradient(90deg, #05033A 0%, #010245 100%);
 }
 
 .price-text {

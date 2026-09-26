@@ -103,6 +103,36 @@ con overlay y botones circulares) — todo legible y coherente. Los hex son
 aproximados a ojo desde la referencia, no sampleados exactos (mismo
 criterio que el banco de paletas.md del registro de negocio).
 
+## Paleta v2: monocromática azul-violeta (2026-09-26, mismo día)
+Rodolfo trajo un segundo referente (rampa monocromática: Catacean Blue
+#010245, Han Purple #3C1DEE, Violets are Blue #7F58F0, Bright Lavender
+#C092F1) y pidió reemplazar la paleta Malina por esta, "explotando" el
+Bright Lavender como color protagonista.
+
+Contraste verificado antes de aplicar:
+- Blanco sobre Catacean: 19.16:1 (AAA).
+- Bright Lavender sobre Catacean: 7.87:1 — seguro incluso en texto chico,
+  por eso se usó como `--accent-color`/`--accent-color-3` (roles de texto
+  más exigentes) Y como fondo de botón (`.btn-accent`, con texto Catacean
+  encima, mismo 7.87:1 en el sentido inverso).
+- Han Purple con texto blanco encima: 8.07:1 — reservado para fondos de
+  bloques grandes (`--accent-color-4`), no para texto chico sobre el fondo
+  (2.37:1 ahí, insuficiente).
+- Violets are Blue sobre Catacean: 4.16:1 — al límite, usado solo en
+  `--accent-color-2` (hover/decorativo, no texto de cuerpo).
+
+Mapeo en `css/style.css` (reemplaza el mapeo Malina anterior):
+`--background-color` Catacean #010245, `--text-color` blanco,
+`--text-color-2`/`--accent-color`/`--accent-color-3` Bright Lavender
+#C092F1, `--accent-color-2` Violets are Blue #7F58F0, `--accent-color-4`
+Han Purple #3C1DEE, `--color-1` #0A0864, `--color-2` #000122, `--color-3`/
+`--background-team` tinte claro lavanda-blanco #F1E9FC. Degradados de
+`.text-accent` (texto de fondo decorativo) reajustados otra vez para
+fundirse con Catacean en vez del índigo anterior.
+
+Verificado visualmente en index.html (hero, sección "Sobre mí") — coherente,
+sin el problema del texto de fondo sólido que apareció la primera vez.
+
 ## Pendiente (próxima pasada)
 1. Textual Showcase, sección Portafolio (tarjetas con caso Vitelia real,
    sin precio ni parentesco — ver reglas en CLAUDE.md), "Why Choose Us"
