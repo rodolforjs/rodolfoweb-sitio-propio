@@ -11,15 +11,54 @@
   Clínica Vitelia (ver reglas en `CLAUDE.md`).
 - Decisión: repo público en GitHub, mismo criterio que el proyecto Vitelia
   pese a la licencia paga del template.
-- Pendiente: nombre de marca, logo, paleta propia, si trabaja solo o con
-  compañero (afecta `team.html`), dominio propio, contenido real de
-  services/about-us/faqs.
+- Repo publicado: https://github.com/rodolforjs/rodolfoweb-sitio-propio
+- Decisiones de identidad (2026-09-26): nombre de marca pendiente
+  (placeholder de trabajo **"Rodolfo Web"**); tono visual = quedarse fiel
+  al lenguaje de Reboost (sin inventar concepto nuevo, sin copiar la
+  estética del portafolio personal ROJAS_RODOLFO_CINE); copy generalista
+  (no cerrado solo a estética/dental/legal).
 
-## Próximos pasos
-1. Definir nombre/identidad (o seguir con placeholder "Rodolfo Web" hasta
-   decidir).
-2. Reskin de `index.html` (hero, servicios, about) — sin tocar estructura.
-3. Armar `portofolio-detail.html` del caso Vitelia con las reglas ya
-   definidas (sin precio real, sin mencionar parentesco).
-4. Ajustar `pricing-plan.html` y `team.html` según lo acordado en
-   `CLAUDE.md`.
+## Reskin de index.html (primera pasada, top de la página)
+Traducido/reescrito con contenido real: `<title>`/meta, nav (Inicio/Sobre
+mí/Servicios/Más/Contacto), offcanvas (bio + contacto real:
+rojasrodolfo906@gmail.com, redes en "#" pendientes de definir), hero
+(titular "-SITIOS HECHOS A MANO//", "Presencia con... *Rodolfo Web", texto
+giratorio "DISEÑO. CÓDIGO. DETALLE."), sección Sobre Mí (encabezado +
+párrafo + botones), sección Servicios (tags y lista de "navigation"
+reemplazados por el catálogo real: Landing+Contacto, Servicio con Agenda,
+integración Cal.com/Agendapro/Reservo, SEO básico, dominio propio,
+ecommerce próximamente).
+
+**Corrección ética aplicada sin fabricar datos:** Reboost trae de fábrica
+un badge "4.9 Star Reviewer" (rating falso) — reemplazado por "1er caso /
+En producción", honesto para una agencia recién creada. NO se tradujeron
+ni se dejaron los testimonios con nombres inventados (Michael Carter,
+Robert Evans, etc.) ni las estadísticas "120/200 Completed Projects" /
+"15 Years Experience" más abajo en la página — **pendiente de decisión
+con Rodolfo**: ocultar esas secciones vía CSS (mismo patrón usado en
+Vitelia para el footer mobile) hasta tener métricas/reviews reales, o
+reemplazarlas por algo honesto de agencia nueva. No fabricar cifras ni
+reviews.
+
+**Nota técnica de verificación:** al levantar el servidor local en el
+puerto 8791 (mismo puerto usado antes para el proyecto Vitelia/Intrio en
+este Mac), un service worker viejo registrado en ese origin interceptó
+los requests y sirvió assets cacheados de Intrio (Google Sans,
+fontawesome4, etc.), rompiendo el layout aunque el HTML real sí era el
+correcto. Se resolvió sirviendo en un puerto nuevo nunca usado (8927).
+Para futuras verificaciones de este proyecto, evitar puertos ya usados
+por otros proyectos de este Mac o limpiar el service worker del origin
+antes de confiar en lo que se ve.
+
+## Pendiente (próxima pasada)
+1. Textual Showcase, sección Portafolio (tarjetas con caso Vitelia real,
+   sin precio ni parentesco — ver reglas en CLAUDE.md), "Why Choose Us"
+   (decidir qué hacer con las estadísticas fabricadas), Pricing Plan
+   (sacar precios fijos tipo suscripción), Testimonials (decidir: ocultar
+   o reemplazar), FAQ (reescribir preguntas reales), CTA final, Blog
+   (dejar sin contenido/ocultar hasta que haya artículos reales), Footer
+   (contacto real, quitar "Prositus by Rometheme").
+2. Logo propio (hoy sigue diciendo "REBOOST" en el header).
+3. Definir nombre de marca final (o seguir con "Rodolfo Web").
+4. Reskin de las demás páginas (about-us, services, portofolio-detail,
+   team, pricing-plan, faqs, contact-us) siguiendo el mismo criterio.
