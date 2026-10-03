@@ -133,6 +133,27 @@ fundirse con Catacean en vez del índigo anterior.
 Verificado visualmente en index.html (hero, sección "Sobre mí") — coherente,
 sin el problema del texto de fondo sólido que apareció la primera vez.
 
+## Pivote de posicionamiento + simplificación (2026-10-02)
+Ver detalle completo en `CLAUDE.md` ("Pivote de posicionamiento y
+simplificación"). Resumen de lo hecho en esta pasada:
+- Nav simplificado a Inicio/Proyectos/Equipo/Beneficios/Contacto en las 6
+  páginas activas (antes tenían Servicios, Más con 8 sub-ítems).
+- Botón de header "Get Started" → "Conversemos" en las 14 páginas.
+- "Why Choose Us" → "Beneficios": checklist honesta en vez de barras de
+  progreso con % inventados y contadores de proyectos/años falsos.
+- `team.html`: 8 tarjetas de personas inventadas → 1 tarjeta real
+  (Rodolfo Rojas) + 1 placeholder honesto de equipo en crecimiento.
+  Corregido bug de JS que dejaba las tarjetas con `display:none`
+  permanente al quitar el filtro de pestañas (ver CLAUDE.md).
+- `contact-us.html`: hero, tarjetas de contacto y formulario completos en
+  español, con email/WhatsApp reales (número placeholder, falta el real).
+- Footer global (14 páginas): CTA + email real + botón WhatsApp +
+  copyright corregido ("Prositus by Rometheme" → "Rodolfo Web").
+- Textos giratorios decorativos "CREATIVE. STRATEGIC. PROFESSIONAL."
+  traducidos a "DISEÑO. CÓDIGO. DETALLE." en todas las páginas activas.
+- Páginas fuera de alcance (about-us, blog, faqs, pricing-plan, services,
+  services-detail, single-post) desvinculadas del nav, no borradas.
+
 ## Pendiente (próxima pasada)
 1. Textual Showcase, sección Portafolio (tarjetas con caso Vitelia real,
    sin precio ni parentesco — ver reglas en CLAUDE.md), "Why Choose Us"

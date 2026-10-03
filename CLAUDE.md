@@ -64,6 +64,76 @@ GitHub con el código completo, mismo criterio ya aplicado al proyecto
 Vitelia. No volver a plantear la objeción de licencia salvo que él
 pregunte.
 
+## Pivote de posicionamiento y simplificación (2026-10-02)
+Rodolfo pidió "ponernos serios": enfoque en lo humano, diseño con toques
+únicos, eficiente — venderse como páginas únicas, lejos del look genérico
+de "diseño con IA". Pidió simplificar la UI a solo 4 secciones: Proyectos,
+Equipo, Beneficios, Contacto (+ Inicio) — "no más que eso".
+
+**Estructura simplificada (vigente):**
+- Nav en todas las páginas: Inicio / Proyectos / Equipo / Beneficios /
+  Contacto. Beneficios es un ancla (`index.html#beneficios`), no página
+  aparte.
+- Páginas activas/enlazadas: `index.html`, `portofolio.html`,
+  `portofolio-detail.html`, `portofolio-detail-personal.html`,
+  `team.html`, `contact-us.html`.
+- Páginas huérfanas (archivo sigue existiendo, ya no enlazadas desde
+  ningún nav — decisión: no borrarlas, solo desvincularlas, por si se
+  recicla contenido después): `about-us.html`, `blog.html`, `faqs.html`,
+  `pricing-plan.html`, `services.html`, `services-detail.html`,
+  `single-post.html`. `404.html` se mantiene (página de error estándar).
+
+**"Why Choose Us" → "Beneficios":** se reemplazaron las barras de progreso
+con porcentajes fabricados (93%/87%/90%/98%) y los contadores falsos
+(120/200 proyectos, 15 años) por una checklist honesta de 4
+diferenciadores reales + 3 cifras honestas de agencia recién creada
+("1 cliente real en producción", "Fundado 2026", "100% contenido real").
+
+**Equipo simplificado:** `team.html` tenía 8 tarjetas de personas
+inventadas (CEO, CMO, COO, etc. con nombres falsos) con tabs de filtro
+por departamento — reemplazado por 1 tarjeta real (Rodolfo Rojas) + 1
+placeholder honesto ("Equipo en Crecimiento — Hoy trabajo solo").
+
+**Bug encontrado y corregido:** al quitar el `#team-tab` (contenedor de
+pestañas de filtro) de `team.html`, el JS de `js/script.js` (que lee la
+pestaña activa por ese ID al cargar la página) quedaba con
+`dataTeamActive = undefined` y llamaba `filterClasses(undefined)`, lo
+que removía la clase `.active` de TODAS las `.class-team` (que tienen
+`display:none` por defecto sin esa clase) — las tarjetas de equipo
+quedaban con 0x0 de tamaño, invisibles, sin error en consola. Solución:
+dejar un `#team-tab` oculto (`style="display:none"`) con un solo tab
+`data-team="all" class="active"` para que el JS tenga de dónde leer el
+filtro inicial, sin mostrar la UI de pestañas. Lección: al quitar
+elementos de UI que un template referencia por ID desde JS compartido,
+verificar si ese JS depende de leer estado inicial de ese elemento en
+`document.ready`, no solo de los listeners de click.
+
+**WhatsApp:** se agregó un botón de WhatsApp en el footer (global,
+`js/script.js`-independiente, enlace directo `wa.me`) y en los cards de
+contacto — **el número usado es un placeholder
+(`https://wa.me/56900000000`), no es el número real de Rodolfo.
+Pendiente que él lo reemplace o lo pase para actualizarlo.**
+
+**Textos giratorios "CREATIVE. STRATEGIC. PROFESSIONAL." (decorativos,
+aparecen 2-3 veces por página):** traducidos a "DISEÑO. CÓDIGO.
+DETALLE." en las 6 páginas activas (index, team, portofolio, las 2
+portofolio-detail, contact-us). Las páginas huérfanas quedaron sin tocar
+(no es prioridad, no se enlazan desde ningún lado).
+
+**Pendiente/gaps conocidos:**
+- La sección "Portfolio" DENTRO de `index.html` (distinta de la página
+  `portofolio.html`) sigue con las tarjetas fake "Vision Tech Solutions"
+  sin tocar — es una sección redundante ahora que existe la página
+  dedicada de Proyectos; evaluar si se simplifica/quita en una próxima
+  pasada.
+- El formulario de contacto (`contact-us.html`) no tiene backend real de
+  envío — el sitio está en GitHub Pages (no Netlify), así que
+  `submit-form.js` probablemente no envía nada de verdad. Falta decidir
+  integración (Web3Forms/Formspree, según `negocio.md`).
+- Testimonios y estadísticas "4.9 Star"-style del home (decisión previa:
+  dejar intactos, en inglés, hasta tener reviews reales) siguen
+  pendientes de revisar bajo este nuevo enfoque honesto.
+
 ## Stack e integraciones
 - Hosting: GitHub Pages (dominio propio pendiente de decidir/comprar).
 - Contacto: Netlify Forms o Web3Forms/Formspree (por definir, sitio no
