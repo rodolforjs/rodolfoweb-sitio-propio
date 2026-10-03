@@ -120,6 +120,41 @@ DETALLE." en las 6 páginas activas (index, team, portofolio, las 2
 portofolio-detail, contact-us). Las páginas huérfanas quedaron sin tocar
 (no es prioridad, no se enlazan desde ningún lado).
 
+## Equipo real + ajustes de footer (2026-10-02, misma sesión)
+Rodolfo pasó fotos reales (carpeta `Recursos/`, gitignored) y confirmó un
+**nuevo integrante: Darío Benítez**, mismo rol que Rodolfo (Diseño &
+Desarrollo Web) — ya no es "trabajo solo". Procesadas y versionadas en
+`image/team/rodolfo.jpg` y `image/team/dario.jpg` (redimensionadas con
+`sips`, originales de `Recursos/` quedan fuera de git).
+
+- Hero de `team.html`: el placeholder "1920x1280" es en realidad un
+  `background-image` CSS (`.bg-image-team` en `css/style.css`, 3
+  ocurrencias por media queries), no un `<img>` — reemplazado el
+  `dummy-img-1920x1280.jpg` por `image/team/rodolfo.jpg` en las 3.
+  Copy del subtítulo mejorado: "TRATO DIRECTO, SIN FILTROS" →
+  "GENTE DE VERDAD, CERO FILTROS".
+- Encabezado de la grilla de equipo: "El Humano Detrás de Rodolfo Web" →
+  "Conoce a las Mentes Creativas Detrás de Rodolfo Web" (tono más chill,
+  plural porque ahora son 2).
+- Tarjeta de Rodolfo: foto real. Tarjeta que antes era "Equipo en
+  Crecimiento" (placeholder) → Darío Benítez, foto real, mismos íconos
+  sociales que Rodolfo.
+- **Imagen descartada a propósito:** Rodolfo adjuntó también una foto de
+  `Recursos/UI_UX Design Guide_....jpeg` (manos sobre laptops, guardada
+  de un artículo externo) como referencia junto al pedido de copy "más
+  chill". No se usó en el sitio — es una foto de stock de un artículo,
+  no contenido real de Rodolfo/Darío, y usarla como si fuera "el equipo
+  trabajando" violaría la regla del proyecto de cero stock genérico. Si
+  Rodolfo confirma que sí la quiere en el sitio bajo otro rol (no como
+  "nuestro proceso"), replantear.
+- Footer global (14 páginas): Rodolfo pidió sacar el botón de WhatsApp
+  que se había agregado (rompía la diagramación original de Reboost) y
+  mejorar el copy — revertido a la estructura original (solo título +
+  párrafo + email + logo), copy nuevo: "HABLEMOS DE TU PRÓXIMA PÁGINA" /
+  "Sin filtros ni intermediarios — cuéntame tu idea y partimos de ahí."
+  El WhatsApp sigue disponible en Contacto y en los íconos sociales del
+  header, solo se sacó del footer.
+
 **Pendiente/gaps conocidos:**
 - La sección "Portfolio" DENTRO de `index.html` (distinta de la página
   `portofolio.html`) sigue con las tarjetas fake "Vision Tech Solutions"

@@ -856,7 +856,7 @@ main section:first-of-type {
 }
 
 .bg-image-team {
-    background: url(../image/dummy-img-1920x1280.jpg) no-repeat 27% 40%, url(../image/icon\ 1.png) no-repeat 106% 15%, url(../image/Image\ Background.png) no-repeat center 0%;
+    background: url(../image/team/rodolfo.jpg) no-repeat 27% 40%, url(../image/icon\ 1.png) no-repeat 106% 15%, url(../image/Image\ Background.png) no-repeat center 0%;
     background-size:
         384px auto,
         207px auto,
@@ -4972,7 +4972,7 @@ a {
     }
 
     .bg-image-team {
-        background: url(../image/dummy-img-1920x1280.jpg) no-repeat 27% 35%, url(../image/icon\ 1.png) no-repeat 106% 11%, url(../image/Image\ Background.png) no-repeat center 0%;
+        background: url(../image/team/rodolfo.jpg) no-repeat 27% 35%, url(../image/icon\ 1.png) no-repeat 106% 11%, url(../image/Image\ Background.png) no-repeat center 0%;
         background-size:
             384px auto,
             207px auto,
@@ -5109,7 +5109,7 @@ a {
     }
 
     .bg-image-team {
-        background: url(../image/dummy-img-1920x1280.jpg) no-repeat 27% 35%, url(../image/icon\ 1.png) no-repeat 10% 15%, url(../image/Image\ Background.png) no-repeat center 0%;
+        background: url(../image/team/rodolfo.jpg) no-repeat 27% 35%, url(../image/icon\ 1.png) no-repeat 10% 15%, url(../image/Image\ Background.png) no-repeat center 0%;
         background-size:
             250px auto,
             150px auto,
