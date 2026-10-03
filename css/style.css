@@ -5238,3 +5238,77 @@ a {
         font-size: 20px;
     }
 }
+
+/* Tooltip de info en las tarjetas de planes */
+.info-tooltip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--text-color-2);
+    color: var(--background-color);
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: help;
+    flex-shrink: 0;
+}
+
+.info-tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 135%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-3);
+    color: var(--background-color);
+    padding: 10px 14px;
+    border-radius: 8px;
+    width: 220px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.4;
+    transition: opacity .2s ease;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.info-tooltip:hover .info-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Toggle "Ver más / Ver menos" en las tarjetas de planes (usa .collapsed que
+   Bootstrap ya agrega/quita solo, sin JS propio) */
+.plan-toggle {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.plan-toggle .text-more,
+.plan-toggle .text-less {
+    display: none;
+}
+
+.plan-toggle.collapsed .text-more {
+    display: inline;
+}
+
+.plan-toggle:not(.collapsed) .text-less {
+    display: inline;
+}
+
+.plan-toggle i {
+    transition: transform .3s ease;
+}
+
+.plan-toggle:not(.collapsed) i {
+    transform: rotate(180deg);
+}
