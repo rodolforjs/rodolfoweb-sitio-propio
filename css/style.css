@@ -812,7 +812,7 @@ main section:first-of-type {
 }
 
 .bg-image {
-    background: url(../image/img\ 1.png) no-repeat 71% 27%, url(../image/icon\ 1.png) no-repeat 13.5% 21%, url(../image/Image\ Background.png) no-repeat center 0%;
+    background: url(../image/hero-retrato.jpg) no-repeat 71% 27%, url(../image/icon\ 1.png) no-repeat 13.5% 21%, url(../image/Image\ Background.png) no-repeat center 0%;
 }
 
 .bg-image-about {
