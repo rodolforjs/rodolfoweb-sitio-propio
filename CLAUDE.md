@@ -158,19 +158,25 @@ Desarrollo Web) — ya no es "trabajo solo". Procesadas y versionadas en
   El WhatsApp sigue disponible en Contacto y en los íconos sociales del
   header, solo se sacó del footer.
 
-**Pendiente/gaps conocidos:**
-- La sección "Portfolio" DENTRO de `index.html` (distinta de la página
-  `portofolio.html`) sigue con las tarjetas fake "Vision Tech Solutions"
-  sin tocar — es una sección redundante ahora que existe la página
-  dedicada de Proyectos; evaluar si se simplifica/quita en una próxima
-  pasada.
+**Pendiente/gaps conocidos (actualizado 2026-10-03):**
+- Resuelto: la sección "Clientes" duplicada dentro de `index.html` ya no
+  tiene las tarjetas fake "Vision Tech Solutions" — ahora muestra los
+  mismos 2 casos reales que `portofolio.html` (ver más abajo).
+- Resuelto: "Pricing Plan" (precios de suscripción falsos) reemplazado
+  por sección "Cómo Trabajamos" (proceso en 4 pasos, sin precios
+  inventados). FAQ traducido con preguntas reales. Blog (posts falsos)
+  eliminado. Testimonios/stats "4.9 Star" del home ya se habían sacado
+  junto con toda la sección "Beneficios".
+- **Grilla de Clientes — decisión para cuando haya más casos (Rodolfo,
+  2026-10-03):** hoy la grilla de 2 tarjetas (en `index.html` y
+  `portofolio.html`) está bien así con solo 2 casos reales, pero cuando
+  haya más clientes, volver a la grilla original de Reboost (mosaico de
+  3 columnas, la que tenía 7 tarjetas antes de reducirla) en vez de
+  seguir en 2 columnas simples.
 - El formulario de contacto (`contact-us.html`) no tiene backend real de
   envío — el sitio está en GitHub Pages (no Netlify), así que
   `submit-form.js` probablemente no envía nada de verdad. Falta decidir
   integración (Web3Forms/Formspree, según `negocio.md`).
-- Testimonios y estadísticas "4.9 Star"-style del home (decisión previa:
-  dejar intactos, en inglés, hasta tener reviews reales) siguen
-  pendientes de revisar bajo este nuevo enfoque honesto.
 
 ## Stack e integraciones
 - Hosting: GitHub Pages (dominio propio pendiente de decidir/comprar).
