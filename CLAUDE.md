@@ -139,14 +139,17 @@ Desarrollo Web) — ya no es "trabajo solo". Procesadas y versionadas en
 - Tarjeta de Rodolfo: foto real. Tarjeta que antes era "Equipo en
   Crecimiento" (placeholder) → Darío Benítez, foto real, mismos íconos
   sociales que Rodolfo.
-- **Imagen descartada a propósito:** Rodolfo adjuntó también una foto de
-  `Recursos/UI_UX Design Guide_....jpeg` (manos sobre laptops, guardada
-  de un artículo externo) como referencia junto al pedido de copy "más
-  chill". No se usó en el sitio — es una foto de stock de un artículo,
-  no contenido real de Rodolfo/Darío, y usarla como si fuera "el equipo
-  trabajando" violaría la regla del proyecto de cero stock genérico. Si
-  Rodolfo confirma que sí la quiere en el sitio bajo otro rol (no como
-  "nuestro proceso"), replantear.
+- **Corrección (2026-10-02, mismo día):** Rodolfo confirmó explícitamente
+  que la foto de `Recursos/UI_UX Design Guide_....jpeg` (mesa de trabajo,
+  laptops, bocetos) SÍ va en el sitio — es la imagen que quería para el
+  fondo del hero de Equipo, no la de Rodolfo. Corregido: `.bg-image-team`
+  ahora apunta a `image/team/equipo-trabajo.jpg` (las 3 ocurrencias por
+  media query), `image/team/rodolfo.jpg` queda solo en su tarjeta del
+  grid. También corregido el título del hero: "EQUIPO" → "NUESTRO
+  EQUIPO" (Rodolfo lo había pedido explícito y no se aplicó a la
+  primera). Lección: no asumir que una imagen de aspecto "stock" nunca
+  es la intención real del usuario — confirmar antes de descartarla en
+  vez de decidir unilateralmente no usarla.
 - Footer global (14 páginas): Rodolfo pidió sacar el botón de WhatsApp
   que se había agregado (rompía la diagramación original de Reboost) y
   mejorar el copy — revertido a la estructura original (solo título +
