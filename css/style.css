@@ -5207,6 +5207,49 @@ a {
         row-gap: 4px;
     }
 
+    .textual-showcase-section {
+        display: none !important;
+    }
+
+    /* Reordena las secciones del home en mobile: Clientes pasa a ir
+       justo después de Sobre Nosotros, antes de Servicios. */
+    main {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    main .bg-image {
+        order: 1 !important;
+    }
+
+    main .sec-about {
+        order: 2 !important;
+    }
+
+    main .sec-portofolio {
+        order: 3 !important;
+    }
+
+    main .sec-services {
+        order: 4 !important;
+    }
+
+    main .textual-showcase-section {
+        order: 5 !important;
+    }
+
+    main .sec-planes {
+        order: 6 !important;
+    }
+
+    main .sec-faqs {
+        order: 7 !important;
+    }
+
+    main .sec-cta {
+        order: 8 !important;
+    }
+
     .pills-grid {
         display: none !important;
     }
@@ -5368,3 +5411,15 @@ a {
 .scrollanimation.adr-7 { animation-duration: 1.575s; }
 .scrollanimation.adr-8 { animation-duration: 1.8s; }
 .scrollanimation.adr-9 { animation-duration: 2.025s; }
+
+/* La animación arranca pausada (congelada en su primer frame, ej.
+   opacity:0 para fadeIn*) y js/scroll-reveal.js la deja correr una sola
+   vez cuando el elemento entra al viewport por primera vez. Así se
+   "descubre" al scrollear en vez de dispararse todo de una al cargar. */
+.scrollanimation {
+    animation-play-state: paused;
+}
+
+.scrollanimation.in-view {
+    animation-play-state: running;
+}
