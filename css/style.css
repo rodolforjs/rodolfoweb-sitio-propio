@@ -81,24 +81,23 @@
 /*  Custom Properties            */
 /* ---------------------------- */
 :root {
-    /* Paleta de prueba: Preto/Off White/Laranja/Roxo Indigo. Laranja es el
-       color protagonista (texto chico, links, botones) — 5.02:1 sobre
-       negro puro, pasa AA. Roxo Indigo se reserva para fondos de bloques
-       grandes con texto blanco encima (8.5:1), no como texto chico sobre
-       negro (2.17:1, insuficiente). Off White es el texto principal
-       (18.4:1 sobre negro). */
-    --text-color: #F2F0EB;
-    --text-color-2: #DF4600;
+    /* Paleta Black/Violet/Lime/White. Lime es el color protagonista (texto
+       chico, links, botones) — 17.75:1 sobre negro puro, contraste altísimo.
+       Violet se reserva para fondos de bloques grandes con texto blanco
+       encima (5.74:1) — Lime sobre Violet también pasa AA (4.85:1) para
+       los estados hover que combinan ambos. White es el texto principal. */
+    --text-color: #FFFFFF;
+    --text-color-2: #C6FF33;
     --background-color: #000000;
-    --background-team: #F2F0EB;
-    --accent-color: #DF4600;
-    --accent-color-2: #4602CE;
-    --accent-color-3: #DF4600;
-    --accent-color-4: #4602CE;
-    --color-1: #150233;
+    --background-team: #FFFFFF;
+    --accent-color: #C6FF33;
+    --accent-color-2: #7D39EB;
+    --accent-color-3: #C6FF33;
+    --accent-color-4: #7D39EB;
+    --color-1: #7D39EB;
     --color-2: #0D0D0D;
-    --color-3: #F2F0EB;
-    --color-4: #150233;
+    --color-3: #FFFFFF;
+    --color-4: #7D39EB;
     --font-1: "Poppins", sans-serif;
     --font-2: "Space Grotesk", sans-serif;
 }
@@ -176,14 +175,14 @@ img {
 }
 
 .text-accent {
-    background: linear-gradient(90deg, #4602CE 0%, #DF4600 100%);
+    background: linear-gradient(90deg, #7D39EB 0%, #C6FF33 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .text-accent.second {
-    background: linear-gradient(90deg, #4602CE 0%, #DF4600 100%);
+    background: linear-gradient(90deg, #7D39EB 0%, #C6FF33 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -198,7 +197,7 @@ img {
     /* geser sedikit ke bawah */
     width: 100%;
     height: 5px;
-    background: linear-gradient(90deg, #4602CE 0%, #DF4600 100%);
+    background: linear-gradient(90deg, #7D39EB 0%, #C6FF33 100%);
 }
 
 .price-text {
