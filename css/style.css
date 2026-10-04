@@ -983,6 +983,20 @@ main section:first-of-type {
     color: var(--primary);
 }
 
+/* Marquee de píldoras de categorías (solo mobile, ver media query 599px) */
+.pills-marquee {
+    display: none;
+}
+
+.pills-marquee .marquee-content {
+    gap: .5rem;
+    align-items: center;
+}
+
+.pills-marquee .marquee-content span {
+    text-wrap: nowrap;
+}
+
 .marquee-item-2 {
     text-wrap: nowrap;
     padding-inline: var(--gap);
@@ -5180,6 +5194,27 @@ a {
         font-style: italic;
     }
 
+    .price-text {
+        font-size: 36px;
+    }
+
+    .price-text2 {
+        font-size: 26px;
+    }
+
+    .card-pricing div:has(> .price-text) {
+        flex-wrap: wrap;
+        row-gap: 4px;
+    }
+
+    .pills-grid {
+        display: none !important;
+    }
+
+    .marquee-container.pills-marquee {
+        display: flex !important;
+    }
+
     .float-icon {
         margin-right: 0;
     }
@@ -5205,9 +5240,8 @@ a {
         margin-left: 8rem;
     }
 
-    .marquee-container.first,
-    .marquee-container.third {
-        display: none;
+    .marquee-container {
+        display: none !important;
     }
 
     .card-team {
@@ -5321,3 +5355,16 @@ a {
 .plan-toggle:not(.collapsed) i {
     transform: rotate(180deg);
 }
+
+/* Animaciones de scroll 25% más rápidas (duración original x0.75).
+   Selector compuesto .scrollanimation.adr-N para ganarle en especificidad
+   a animation_utility.css del CDN, que solo usa .adr-N. */
+.scrollanimation.adr-1 { animation-duration: 0.225s; }
+.scrollanimation.adr-2 { animation-duration: 0.45s; }
+.scrollanimation.adr-3 { animation-duration: 0.675s; }
+.scrollanimation.adr-4 { animation-duration: 0.9s; }
+.scrollanimation.adr-5 { animation-duration: 1.125s; }
+.scrollanimation.adr-6 { animation-duration: 1.35s; }
+.scrollanimation.adr-7 { animation-duration: 1.575s; }
+.scrollanimation.adr-8 { animation-duration: 1.8s; }
+.scrollanimation.adr-9 { animation-duration: 2.025s; }
