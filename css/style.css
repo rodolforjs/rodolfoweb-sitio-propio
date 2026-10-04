@@ -5211,8 +5211,9 @@ a {
         display: none !important;
     }
 
-    /* Reordena las secciones del home en mobile: Clientes pasa a ir
-       justo después de Sobre Nosotros, antes de Servicios. */
+    /* Reordena las secciones del home en mobile: Planes y Clientes pasan
+       a ir justo después de Sobre Nosotros, antes de Servicios (mismo
+       orden que ya quedó físicamente en el HTML para desktop). */
     main {
         display: flex !important;
         flex-direction: column !important;
@@ -5226,19 +5227,19 @@ a {
         order: 2 !important;
     }
 
-    main .sec-portofolio {
+    main .sec-planes {
         order: 3 !important;
     }
 
-    main .sec-services {
+    main .sec-portofolio {
         order: 4 !important;
     }
 
-    main .textual-showcase-section {
+    main .sec-services {
         order: 5 !important;
     }
 
-    main .sec-planes {
+    main .textual-showcase-section {
         order: 6 !important;
     }
 
