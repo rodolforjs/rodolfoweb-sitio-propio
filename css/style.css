@@ -81,23 +81,23 @@
 /*  Custom Properties            */
 /* ---------------------------- */
 :root {
-    /* Paleta Black/Violet/Lime/White. Lime es el color protagonista (texto
-       chico, links, botones) — 17.75:1 sobre negro puro, contraste altísimo.
-       Violet se reserva para fondos de bloques grandes con texto blanco
-       encima (5.74:1) — Lime sobre Violet también pasa AA (4.85:1) para
-       los estados hover que combinan ambos. White es el texto principal. */
+    /* Paleta monocromática azul-violeta (Catacean Blue/Han Purple/Violets are
+       Blue/Bright Lavender) + blanco puro. Bright Lavender es el color
+       protagonista (botones, CTAs, links) — verificado 7.87:1 sobre el fondo
+       Catacean, seguro incluso como texto chico. Han Purple se reserva para
+       fondos de bloques grandes (8.07:1 con texto blanco encima). */
     --text-color: #FFFFFF;
-    --text-color-2: #C6FF33;
-    --background-color: #000000;
-    --background-team: #FFFFFF;
-    --accent-color: #C6FF33;
-    --accent-color-2: #7D39EB;
-    --accent-color-3: #C6FF33;
-    --accent-color-4: #7D39EB;
-    --color-1: #7D39EB;
-    --color-2: #0D0D0D;
-    --color-3: #FFFFFF;
-    --color-4: #7D39EB;
+    --text-color-2: #C092F1;
+    --background-color: #010245;
+    --background-team: #F1E9FC;
+    --accent-color: #C092F1;
+    --accent-color-2: #7F58F0;
+    --accent-color-3: #C092F1;
+    --accent-color-4: #3C1DEE;
+    --color-1: #0A0864;
+    --color-2: #000122;
+    --color-3: #F1E9FC;
+    --color-4: #7F58F0;
     --font-1: "Poppins", sans-serif;
     --font-2: "Space Grotesk", sans-serif;
 }
@@ -175,14 +175,14 @@ img {
 }
 
 .text-accent {
-    background: linear-gradient(90deg, #7D39EB 0%, #C6FF33 100%);
+    background: linear-gradient(90deg, #2A2496 0%, #140F5E 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .text-accent.second {
-    background: linear-gradient(90deg, #7D39EB 0%, #C6FF33 100%);
+    background: linear-gradient(90deg, #2A2496 0%, #140F5E 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -197,7 +197,7 @@ img {
     /* geser sedikit ke bawah */
     width: 100%;
     height: 5px;
-    background: linear-gradient(90deg, #7D39EB 0%, #C6FF33 100%);
+    background: linear-gradient(90deg, #2A2496 0%, #140F5E 100%);
 }
 
 .price-text {
