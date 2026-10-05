@@ -666,6 +666,13 @@ main section:first-of-type {
     background-position: center;
 }
 
+/* Páginas sin hero (ej. Contacto) parten directo en este bloque, pegado
+   al header fijo — el padding-top normal del .section no alcanza para
+   despejarlo (el header mide ~110px en desktop). */
+.contact-hero-gap {
+    padding-top: 180px !important;
+}
+
 .r-container {
     max-width: 1440px;
     margin-right: auto;
@@ -4581,6 +4588,10 @@ a {
 
     .section {
         padding: 4em 2em 4em 2em;
+    }
+
+    .contact-hero-gap {
+        padding-top: 150px !important;
     }
 
     .divider {
