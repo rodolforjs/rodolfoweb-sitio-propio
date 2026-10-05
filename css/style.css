@@ -5333,17 +5333,38 @@ a {
         width: 50px !important;
     }
 
-    /* Los títulos/párrafos centrados de las intros de sección usan
-       max-width inline en % (55-73%), pensado para pantallas anchas.
-       En mobile eso angosta mucho el bloque de texto y se ve como
-       padding de más a los costados. */
-    .text-center[style*="max-width"] {
+    /* Títulos/párrafos con max-width inline en % (55-73%), pensado para
+       pantallas anchas. En mobile eso angosta mucho el bloque de texto
+       y se ve como padding de más a los costados. Transversal a
+       cualquier texto con max-width inline, no solo los centrados. */
+    [style*="max-width"] {
         max-width: 92% !important;
     }
 
     /* El texto de párrafo se sentía chico en mobile. */
     p {
         font-size: 18px;
+    }
+
+    /* Los botones usan un font-size propio, más chico que el párrafo
+       en mobile — se parejan para que no se vean en desventaja. */
+    .btn {
+        font-size: 18px !important;
+    }
+
+    /* "Cómo trabajamos" sobra al lado de "Conócenos más" en mobile. */
+    a[href="team.html"].inline-link-btn {
+        display: none !important;
+    }
+
+    /* El overlay de las tarjetas de proyectos (año, título, descripción,
+       Ver Web) solo se mostraba con :hover — en mobile no hay hover real,
+       así que queda un estado "pegado" a medio camino, mezclado con la
+       imagen de fondo. Se deja siempre visible y con fondo más opaco
+       para que el texto se lea bien sobre cualquier imagen. */
+    .image-overlay {
+        transform: scaleY(1) !important;
+        background: rgba(5, 5, 10, 0.82) !important;
     }
 
     .float-bg-image {
