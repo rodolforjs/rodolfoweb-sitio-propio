@@ -5357,21 +5357,25 @@ a {
         display: none !important;
     }
 
+    /* "Ver todos los clientes" sobra en mobile, cada card ya tiene su
+       propio botón "Ver Web" dentro del overlay. */
+    a[href="portofolio.html"].inline-link-btn {
+        display: none !important;
+    }
+
     /* El overlay de las tarjetas de proyectos (año, título, descripción,
        Ver Web) solo se mostraba con :hover — en mobile no hay hover real,
        así que queda un estado "pegado" a medio camino, mezclado con la
        imagen de fondo. Se deja siempre visible, con fondo más liviano
-       para que se note más la imagen detrás, y solo con el año/título
-       (se sacan la descripción y el chip "Ver Web" para simplificar y
-       que no queden espaciados dispares entre tarjetas con distinto
-       largo de texto — el ícono flecha sigue llevando al detalle). */
+       para que se note más la imagen detrás, y solo con año/título/Ver Web
+       (se saca solo la descripción para simplificar y que no queden
+       espaciados dispares entre tarjetas con distinto largo de texto). */
     .image-overlay {
         transform: scaleY(1) !important;
         background: rgba(5, 5, 10, 0.55) !important;
     }
 
-    .card-overlay-desc,
-    .card-overlay-weblink {
+    .card-overlay-desc {
         display: none !important;
     }
 
