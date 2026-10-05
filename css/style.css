@@ -5309,6 +5309,43 @@ a {
         font-size: 15px;
     }
 
+    /* La tarjeta del CTA final (¿Listo para una página...) solo tenía
+       padding vertical (7rem 0 inline) — el título queda pegado a los
+       bordes de la tarjeta en mobile porque no forma parte del grid de
+       columnas que le da margen al párrafo. Transversal: index.html y
+       contact-us.html comparten esta misma tarjeta. */
+    .cta-card {
+        padding-inline: 1.5rem !important;
+    }
+
+    /* Los títulos fantasma con degradado (SERVICIOS, CLIENTES, PREGUNTAS...)
+       usan un "top" negativo inline (ej. -4%, -5%) pensado para desktop.
+       En mobile ese offset los empuja fuera del borde superior de su
+       sección, y como .section tiene overflow:hidden quedan cortados o
+       invisibles. Se ancla al borde superior del contenedor. */
+    .sub-heading.position-absolute {
+        top: 0 !important;
+    }
+
+    /* La rayita morada antes de los títulos usa width:100px inline,
+       pensada para desktop — se ve desproporcionada en mobile. */
+    .border-bottom.border-accent {
+        width: 50px !important;
+    }
+
+    /* Los títulos/párrafos centrados de las intros de sección usan
+       max-width inline en % (55-73%), pensado para pantallas anchas.
+       En mobile eso angosta mucho el bloque de texto y se ve como
+       padding de más a los costados. */
+    .text-center[style*="max-width"] {
+        max-width: 92% !important;
+    }
+
+    /* El texto de párrafo se sentía chico en mobile. */
+    p {
+        font-size: 18px;
+    }
+
     .float-bg-image {
         margin-top: 0;
     }
