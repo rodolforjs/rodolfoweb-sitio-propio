@@ -4951,7 +4951,8 @@ a {
     }
 
     .bg-image {
-        background: url(../image/img\ 1.png) no-repeat 70% 28%, url(../image/icon\ 1.png) no-repeat 0% 8%, url(../image/Image\ Background.png) no-repeat center;
+        background: url(../image/hero-retrato.jpg) no-repeat 70% 28%, url(../image/Image\ Background.png) no-repeat center;
+        background-size: 300px auto, cover;
     }
 
     .bg-image-about {
@@ -5084,10 +5085,9 @@ a {
 
 @media only screen and (max-width:599px) {
     .bg-image {
-        background: url(../image/img\ 1.png) no-repeat 71% 27%, url(../image/icon\ 1.png) no-repeat 13.5% 6%, url(../image/Image\ Background.png) no-repeat center;
+        background: url(../image/hero-retrato.jpg) no-repeat 71% 27%, url(../image/Image\ Background.png) no-repeat center;
         background-size:
-            250px auto,
-            150px auto,
+            280px auto,
             cover;
     }
 
