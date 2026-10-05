@@ -5263,6 +5263,52 @@ a {
         margin-right: 0;
     }
 
+    .info-tooltip-text {
+        left: auto !important;
+        right: -10px !important;
+        transform: none !important;
+        width: 200px !important;
+        max-width: calc(100vw - 4rem);
+    }
+
+    /* Los hipervínculos sueltos se ven poco claros como call-to-action en
+       mobile — se convierten en botón outline (mismo look que .btn-accent-3.cta). */
+    .inline-link-btn {
+        display: inline-block;
+        width: max-content;
+        max-width: 100%;
+        text-decoration: none !important;
+        border: 2px solid var(--text-color);
+        border-radius: 10px;
+        padding: 8px 20px;
+        margin-top: 4px;
+    }
+
+    /* La sección Servicios quedaba muy apretada: el marquee de píldoras
+       pegado al listado, y cada fila sin padding vertical propio. */
+    .pills-marquee {
+        margin-bottom: 2rem !important;
+    }
+
+    .navigation {
+        padding-block: 18px;
+    }
+
+    /* Las rayas decorativas bajo los títulos con degradado (.text-accent)
+       estaban calculadas para el tamaño de fuente de desktop (140px) y
+       quedaban mal ubicadas/gigantes con el font-size de mobile (40px). */
+    .text-accent::after {
+        bottom: 14px;
+        height: 2px;
+    }
+
+    /* Las respuestas del FAQ no tenían padding interno y el texto quedaba
+       pegado a los bordes de la pantalla. */
+    .accordion .accordion-body {
+        padding: 12px 4px 0;
+        font-size: 15px;
+    }
+
     .float-bg-image {
         margin-top: 0;
     }
