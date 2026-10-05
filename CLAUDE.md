@@ -158,6 +158,13 @@ Desarrollo Web) — ya no es "trabajo solo". Procesadas y versionadas en
   El WhatsApp sigue disponible en Contacto y en los íconos sociales del
   header, solo se sacó del footer.
 
+**Tercera integrante (2026-10-05):** Ybrana Urosa se suma al equipo —
+rol Publicista & Marketing (distinto del rol de diseño/desarrollo de
+Rodolfo y Darío). Tarjeta agregada en `team.html` (`image/team/ybrana.jpg`,
+misma estructura de card que las otras dos). No se tocó el stack de
+avatares "1er caso" de `index.html` (ese es específico del caso Vitelia,
+en el que ella no participó).
+
 **Pendiente/gaps conocidos (actualizado 2026-10-03):**
 - Resuelto: la sección "Clientes" duplicada dentro de `index.html` ya no
   tiene las tarjetas fake "Vision Tech Solutions" — ahora muestra los
