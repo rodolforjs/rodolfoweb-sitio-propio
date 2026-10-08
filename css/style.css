@@ -491,6 +491,12 @@ main section:first-of-type {
 
 #header {
     transition: all 0.5s ease;
+    --edge-pad: clamp(1.25rem, 3vw, 3.5rem);
+}
+
+#header>.r-container {
+    padding-left: var(--edge-pad);
+    padding-right: var(--edge-pad);
 }
 
 .logo-container {
@@ -5642,11 +5648,14 @@ a {
 /* Hero del inicio: titular a la izquierda + dibujo a mano (SVG propio)
    a la derecha. Las capas de fotos/overlay/degrade quedan debajo. */
 .hero-gf {
+    --edge-pad: clamp(1.25rem, 3vw, 3.5rem);
     min-height: 80vh;
     display: flex;
     align-items: center;
     padding-top: 7rem;
     padding-bottom: 11rem;
+    padding-left: calc(var(--edge-pad) + 12px);
+    padding-right: var(--edge-pad);
 }
 
 .hero-gf__eyebrow {
