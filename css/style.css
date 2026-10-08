@@ -819,12 +819,93 @@ main section:first-of-type {
 }
 
 .bg-image {
-    background: url(../image/hero-retrato.jpg) no-repeat 71% 27%, url(../image/icon\ 1.png) no-repeat 13.5% 21%, linear-gradient(rgba(1, 2, 69, 0.72), rgba(1, 2, 69, 0.72)), url(../image/hero-mosaic.jpg) no-repeat center 0%;
-    background-size:
-        384px auto,
-        auto,
-        cover,
-        cover;
+    position: relative;
+}
+
+/* Fondo del hero: 3 fotos reales en slideshow (se cruzan cada 4s) +
+   overlay azul de marca para legibilidad + degrade final a color
+   sólido justo antes de la franja de logos, para que las tiras
+   queden sobre azul plano como el diseño original. El retrato de
+   Rodolfo y el ícono decorativo van en su propia capa, encima de
+   todo esto, para que no se laven con el overlay/degrade. */
+.bg-image>.hero-bg-slideshow,
+.bg-image>.hero-bg-overlay,
+.bg-image>.hero-bg-fade,
+.bg-image>.hero-photo-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.bg-image>.hero-bg-slideshow {
+    z-index: 0;
+    overflow: hidden;
+}
+
+.hero-bg-slide {
+    position: absolute;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    animation: heroSlideFade 12s infinite;
+}
+
+.hero-bg-slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.hero-bg-slide:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.hero-bg-slide:nth-child(3) {
+    animation-delay: 8s;
+}
+
+@keyframes heroSlideFade {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    28% {
+        opacity: 1;
+    }
+
+    34% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.bg-image>.hero-bg-overlay {
+    z-index: 1;
+    background: rgba(1, 2, 69, 0.72);
+}
+
+.bg-image>.hero-bg-fade {
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(1, 2, 69, 0) 0%, rgba(1, 2, 69, 0) 35%, var(--background-color) 60%);
+}
+
+.bg-image>.hero-photo-layer {
+    z-index: 3;
+    background: url(../image/hero-retrato.jpg) no-repeat 71% 27%, url(../image/icon\ 1.png) no-repeat 13.5% 21%;
+    background-size: 384px auto, auto;
+}
+
+.bg-image>.r-container,
+.bg-image>.accent-primary {
+    position: relative;
+    z-index: 4;
 }
 
 .bg-image-about {
@@ -4962,9 +5043,9 @@ a {
         display: none;
     }
 
-    .bg-image {
-        background: url(../image/hero-retrato.jpg) no-repeat 70% 28%, linear-gradient(rgba(1, 2, 69, 0.72), rgba(1, 2, 69, 0.72)), url(../image/hero-mosaic.jpg) no-repeat center;
-        background-size: 300px auto, cover, cover;
+    .bg-image>.hero-photo-layer {
+        background: url(../image/hero-retrato.jpg) no-repeat 70% 28%;
+        background-size: 300px auto;
     }
 
     .bg-image-about {
@@ -5096,12 +5177,9 @@ a {
 }
 
 @media only screen and (max-width:599px) {
-    .bg-image {
-        background: url(../image/hero-retrato.jpg) no-repeat 71% 27%, linear-gradient(rgba(1, 2, 69, 0.72), rgba(1, 2, 69, 0.72)), url(../image/hero-mosaic.jpg) no-repeat center;
-        background-size:
-            280px auto,
-            cover,
-            cover;
+    .bg-image>.hero-photo-layer {
+        background: url(../image/hero-retrato.jpg) no-repeat 71% 27%;
+        background-size: 280px auto;
     }
 
     .bg-image-about {
