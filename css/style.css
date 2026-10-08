@@ -5947,3 +5947,23 @@ a.btn-play {
         --watermark-clearance: 0rem;
     }
 }
+
+/* Contacto no tiene hero: parte justo bajo el header fijo, así que el
+   texto decorativo y el contenido se desplazan la altura del header. */
+:root {
+    --header-h: 7rem;
+}
+
+.contact-hero-gap {
+    padding-top: calc(var(--section-gap) + var(--watermark-clearance) + var(--header-h)) !important;
+}
+
+.contact-hero-gap .sub-heading.text-accent.position-absolute {
+    top: var(--header-h) !important;
+}
+
+@media only screen and (max-width: 1024px) {
+    :root {
+        --header-h: 6rem;
+    }
+}
