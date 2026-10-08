@@ -5308,43 +5308,42 @@ a {
         display: none !important;
     }
 
-    /* Reordena las secciones del home en mobile: Planes y Clientes pasan
-       a ir justo después de Sobre Nosotros, antes de Servicios (mismo
-       orden que ya quedó físicamente en el HTML para desktop). */
-    main {
+    /* Reordena las secciones del home en mobile (solo en index.html,
+       main.home-main): hero, Planes, Sobre nosotros, Servicios... */
+    main.home-main {
         display: flex !important;
         flex-direction: column !important;
     }
 
-    main .bg-image {
+    main.home-main .bg-image {
         order: 1 !important;
     }
 
-    main .sec-about {
+    main.home-main .sec-planes {
         order: 2 !important;
     }
 
-    main .sec-planes {
+    main.home-main .sec-about {
         order: 3 !important;
     }
 
-    main .sec-portofolio {
+    main.home-main .sec-portofolio {
         order: 4 !important;
     }
 
-    main .sec-services {
+    main.home-main .sec-services {
         order: 5 !important;
     }
 
-    main .textual-showcase-section {
+    main.home-main .textual-showcase-section {
         order: 6 !important;
     }
 
-    main .sec-faqs {
+    main.home-main .sec-faqs {
         order: 7 !important;
     }
 
-    main .sec-cta {
+    main.home-main .sec-cta {
         order: 8 !important;
     }
 
