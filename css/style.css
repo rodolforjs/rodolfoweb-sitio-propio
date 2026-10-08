@@ -5967,3 +5967,9 @@ main .section:has(.sub-heading.position-absolute):not(.bg-image) {
         --header-h: 6rem;
     }
 }
+
+/* Heros de casos: las fotos son capturas de los sitios (con texto propio),
+   así que el overlay es más denso para que no compita con el titular. */
+.hero-bg-slideshow.static.case-shot~.hero-bg-overlay {
+    background: rgba(1, 2, 69, 0.86);
+}
