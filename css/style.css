@@ -822,7 +822,7 @@ main section:first-of-type {
     position: relative;
 }
 
-/* Fondo del hero: 3 fotos reales en slideshow (se cruzan cada 4s) +
+/* Fondo del hero: 3 fotos reales en slideshow (se cruzan cada 10s) +
    overlay azul de marca para legibilidad + degrade final a color
    sólido justo antes de la franja de logos, para que las tiras
    queden sobre azul plano como el diseño original. El retrato de
@@ -846,10 +846,14 @@ main section:first-of-type {
     position: absolute;
     inset: 0;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: center 35%;
+    background-size: 85% auto;
+    -webkit-mask-image: linear-gradient(to right, transparent 7%, #000 22%, #000 78%, transparent 93%), linear-gradient(to bottom, transparent 17%, #000 38%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to right, transparent 7%, #000 22%, #000 78%, transparent 93%), linear-gradient(to bottom, transparent 17%, #000 38%);
+    mask-composite: intersect;
     opacity: 0;
-    animation: heroSlideFade 12s infinite;
+    animation: heroSlideFade 30s infinite;
 }
 
 .hero-bg-slide:nth-child(1) {
@@ -857,11 +861,11 @@ main section:first-of-type {
 }
 
 .hero-bg-slide:nth-child(2) {
-    animation-delay: 4s;
+    animation-delay: 10s;
 }
 
 .hero-bg-slide:nth-child(3) {
-    animation-delay: 8s;
+    animation-delay: 20s;
 }
 
 @keyframes heroSlideFade {
@@ -893,7 +897,7 @@ main section:first-of-type {
 
 .bg-image>.hero-bg-fade {
     z-index: 2;
-    background: linear-gradient(to bottom, rgba(1, 2, 69, 0) 0%, rgba(1, 2, 69, 0) 35%, var(--background-color) 60%);
+    background: linear-gradient(to bottom, rgba(1, 2, 69, 0) 0%, rgba(1, 2, 69, 0) 62%, var(--background-color) 82%);
 }
 
 .bg-image>.hero-photo-layer {
