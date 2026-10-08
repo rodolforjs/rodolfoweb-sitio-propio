@@ -5901,3 +5901,12 @@ a.btn-play {
     width: 100%;
     max-width: 486px;
 }
+
+/* Títulos decorativos de fondo (.sub-heading con degradado): la caja es
+   más baja que las letras y el degradado recortaba la parte de arriba.
+   Se agrega espacio arriba y se compensa con margen negativo para que
+   el texto y su raya inferior queden donde estaban. */
+.sub-heading.text-accent {
+    padding-top: 0.25em;
+    margin-top: -0.25em;
+}
