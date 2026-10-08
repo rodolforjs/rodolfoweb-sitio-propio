@@ -5922,12 +5922,12 @@ a.btn-play {
     --watermark-clearance: 5rem;
 }
 
-.section:not(.bg-image):not(.legal) {
+main .section:not(.bg-image):not(.legal) {
     padding-top: var(--section-gap);
     padding-bottom: var(--section-gap);
 }
 
-.section:has(.sub-heading.position-absolute):not(.bg-image) {
+main .section:has(.sub-heading.position-absolute):not(.bg-image) {
     padding-top: calc(var(--section-gap) + var(--watermark-clearance));
 }
 
