@@ -5761,22 +5761,15 @@ a {
     background: rgba(1, 2, 69, 0.68);
 }
 
-/* Footer: círculo "Escribe y resolvemos" con flecha vertical */
+/* Footer: círculo "Escribe y resolvemos" (enlace a Contacto) */
 a.btn-play.footer {
     text-decoration: none;
     text-align: center;
 }
 
-.btn-play.footer .btn-play__icon--copy {
-    transform: translate(0, 150%);
-}
-
-.btn-play.footer:hover .btn-play__icon:first-child {
-    transform: translate(0, -150%);
-}
-
-.btn-play.footer:hover .btn-play__icon--copy {
-    transform: translate(0);
+.btn-play.footer .btn-play__text,
+.btn-play.footer .btn-play__text>span {
+    text-align: center;
 }
 
 footer a.text-color-2:hover {
