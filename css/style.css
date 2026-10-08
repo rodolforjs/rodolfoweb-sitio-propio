@@ -5889,3 +5889,16 @@ footer a.text-color-2:hover {
     margin: 2rem 0 0;
     color: var(--text-color-2);
 }
+
+/* Sección "Sobre nosotros" y proceso en Equipo */
+a.btn-play {
+    text-decoration: none;
+    text-align: center;
+}
+
+.process-img {
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    width: 100%;
+    max-width: 486px;
+}
