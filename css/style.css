@@ -5749,3 +5749,14 @@ a {
         margin: 0 auto;
     }
 }
+
+/* Heros de Equipo y Clientes: misma diagramación que el inicio, con una
+   sola foto de fondo (sin slideshow). */
+.hero-bg-slideshow.static .hero-bg-slide {
+    opacity: 1;
+    animation: none;
+}
+
+.hero-bg-slideshow.static~.hero-bg-overlay {
+    background: rgba(1, 2, 69, 0.68);
+}
