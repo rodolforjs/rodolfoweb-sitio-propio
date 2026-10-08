@@ -5639,3 +5639,104 @@ a {
 .scrollanimation.in-view {
     animation-play-state: running;
 }
+/* Hero del inicio: titular a la izquierda + dibujo a mano (SVG propio)
+   a la derecha. Las capas de fotos/overlay/degrade quedan debajo. */
+.hero-gf {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding-top: 7rem;
+    padding-bottom: 11rem;
+}
+
+.hero-gf__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 0 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--text-color);
+}
+
+.hero-gf__eyebrow span {
+    width: 70px;
+    height: 1px;
+    background: var(--text-color);
+}
+
+.hero-gf__title {
+    font-size: clamp(2.6rem, 5.6vw, 5.2rem);
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0 0 1.5rem;
+}
+
+.hero-gf__lead {
+    max-width: 36rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0.85;
+    margin: 0 0 2rem;
+}
+
+.hero-gf__art svg {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    margin-left: auto;
+    overflow: visible;
+}
+
+.hero-gf__art path,
+.hero-gf__art circle {
+    stroke: var(--accent-color);
+    stroke-width: 5;
+}
+
+.hero-gf__art .lime {
+    stroke: #C9F23B;
+}
+
+.hero-gf__art .fill {
+    fill: #C9F23B;
+}
+
+.hero-gf__art .phone {
+    fill: rgba(1, 2, 69, 0.88);
+}
+
+.hero-gf__art .dr {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: heroDraw 1.1s ease-out forwards;
+    animation-delay: var(--d, 0s);
+}
+
+@keyframes heroDraw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-gf__art .dr {
+        animation: none;
+        stroke-dashoffset: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-gf {
+        padding-top: 8rem;
+        padding-bottom: 9rem;
+    }
+
+    .hero-gf__art svg {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}
