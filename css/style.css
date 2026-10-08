@@ -819,10 +819,11 @@ main section:first-of-type {
 }
 
 .bg-image {
-    background: url(../image/hero-retrato.jpg) no-repeat 71% 27%, url(../image/icon\ 1.png) no-repeat 13.5% 21%, url(../image/Image\ Background.png) no-repeat center 0%;
+    background: url(../image/hero-retrato.jpg) no-repeat 71% 27%, url(../image/icon\ 1.png) no-repeat 13.5% 21%, linear-gradient(rgba(1, 2, 69, 0.72), rgba(1, 2, 69, 0.72)), url(../image/hero-mosaic.jpg) no-repeat center 0%;
     background-size:
         384px auto,
         auto,
+        cover,
         cover;
 }
 
@@ -4962,8 +4963,8 @@ a {
     }
 
     .bg-image {
-        background: url(../image/hero-retrato.jpg) no-repeat 70% 28%, url(../image/Image\ Background.png) no-repeat center;
-        background-size: 300px auto, cover;
+        background: url(../image/hero-retrato.jpg) no-repeat 70% 28%, linear-gradient(rgba(1, 2, 69, 0.72), rgba(1, 2, 69, 0.72)), url(../image/hero-mosaic.jpg) no-repeat center;
+        background-size: 300px auto, cover, cover;
     }
 
     .bg-image-about {
@@ -5096,9 +5097,10 @@ a {
 
 @media only screen and (max-width:599px) {
     .bg-image {
-        background: url(../image/hero-retrato.jpg) no-repeat 71% 27%, url(../image/Image\ Background.png) no-repeat center;
+        background: url(../image/hero-retrato.jpg) no-repeat 71% 27%, linear-gradient(rgba(1, 2, 69, 0.72), rgba(1, 2, 69, 0.72)), url(../image/hero-mosaic.jpg) no-repeat center;
         background-size:
             280px auto,
+            cover,
             cover;
     }
 
@@ -5539,6 +5541,14 @@ a {
 .scrollanimation.adr-7 { animation-duration: 1.575s; }
 .scrollanimation.adr-8 { animation-duration: 1.8s; }
 .scrollanimation.adr-9 { animation-duration: 2.025s; }
+
+/* La sección "Textual Showcase" (home) se sentía lenta con el stagger
+   de 4 frases — 30% más rápido solo ahí, sin tocar adr-9/adl-N
+   globales usados en otras secciones. */
+.textual-showcase-section .scrollanimation.adr-9 { animation-duration: 1.4175s !important; }
+.textual-showcase-section .adl-2 { animation-delay: 0.42s !important; }
+.textual-showcase-section .adl-4 { animation-delay: 0.84s !important; }
+.textual-showcase-section .adl-6 { animation-delay: 1.26s !important; }
 
 /* La animación arranca pausada (congelada en su primer frame, ej.
    opacity:0 para fadeIn*) y js/scroll-reveal.js la deja correr una sola
