@@ -200,3 +200,6 @@ en el que ella no participó).
 - **Compartir:** `og:image` propio (`image/og-compas.png`, 1200×630); los casos usan su captura.
 - **404** traducida al español (el título quedaba invisible por la animación).
 - Precios publicados: Vitrina $245.000 y Agenda $295.000.
+
+## Dominio propio (2026-10-09)
+`agenciacompas.cl` (NIC Chile, cuenta propia de Rodolfo como persona natural; DNS en Cloudflare, cuenta aparte de la de Vitelia). Registros: 4 A de GitHub Pages + CNAME `www` → `rodolforjs.github.io`, todos «DNS only». Archivo `CNAME` en la raíz del repo. Canonical, og, sitemap y robots apuntan a `https://agenciacompas.cl/`. Correo: Cloudflare Email Routing (`contacto@` y `rodolfo@`) + Gmail «Enviar como» con Brevo (pendiente).
