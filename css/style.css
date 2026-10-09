@@ -6029,3 +6029,29 @@ main .section:has(.sub-heading.position-absolute):not(.bg-image) {
 .sec-planes .bg-accent-color-4 .plan-cta .btn i {
     color: var(--background-color);
 }
+
+/* Planes: textos de cabecera más compactos y botón bajo el precio */
+.sec-planes .plan-card h4 {
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.sec-planes .plan-card .price-text {
+    font-size: 2.6rem;
+    line-height: 1.1;
+}
+
+.sec-planes .plan-card .price-text+span {
+    font-size: 0.85rem;
+    padding-bottom: 0.4rem;
+    padding-left: 0.35rem;
+}
+
+.sec-planes .plan-card p {
+    font-size: 0.95rem;
+}
+
+.sec-planes .plan-cta {
+    margin-top: 0;
+    padding-top: 0;
+}
