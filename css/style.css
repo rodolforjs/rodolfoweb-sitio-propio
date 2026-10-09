@@ -5973,3 +5973,20 @@ main .section:has(.sub-heading.position-absolute):not(.bg-image) {
 .hero-bg-slideshow.static.case-shot~.hero-bg-overlay {
     background: rgba(1, 2, 69, 0.86);
 }
+
+/* Tiras de logos del hero: ocultas por ahora (faltan logos de clientes).
+   Para volver a mostrarlas, borrar esta regla. El hero recupera su
+   espacio inferior para que el degradé cierre limpio sin las tiras. */
+.bg-image>.accent-primary {
+    display: none !important;
+}
+
+.hero-gf {
+    padding-bottom: 6rem;
+}
+
+@media (max-width: 991px) {
+    .hero-gf {
+        padding-bottom: 5rem;
+    }
+}
