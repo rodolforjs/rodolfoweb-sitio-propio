@@ -6180,3 +6180,9 @@ main .section:has(.sub-heading.position-absolute):not(.bg-image) {
 .custom-select.is-invalid .invalid-feedback {
     display: block;
 }
+
+/* Correo del footer oculto por ahora (conserva el espacio para no mover el logo).
+   Para volver a mostrarlo: borrar esta regla. */
+.footer-email {
+    visibility: hidden;
+}
