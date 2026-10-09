@@ -501,7 +501,7 @@ main section:first-of-type {
 
 .logo-container {
     max-width: 200px;
-    width: 115px;
+    width: 127px; /* 115px + 10% */
 }
 
 .logo-partner {
@@ -4648,7 +4648,7 @@ a {
     /* ---------------------------- */
     .logo-container {
         max-width: 200px;
-        width: 115px;
+        width: 127px; /* 115px + 10% */
     }
 
     .nav-link {
