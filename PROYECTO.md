@@ -7,7 +7,7 @@
 - Copiado `~/Downloads/Templates_Web/reboost ver 1.0.3/HTML_TEMPLATE` a
   este proyecto (`HTML_TEMPLATE/`) — original queda intacto.
 - Decisión: incluir sección de portafolio (ya viene en Reboost:
-  `portofolio.html` / `portofolio-detail.html`), primer caso destacado
+  `portfolio.html` / `portfolio-detail.html`), primer caso destacado
   Clínica Vitelia (ver reglas en `CLAUDE.md`).
 - Decisión: repo público en GitHub, mismo criterio que el proyecto Vitelia
   pese a la licencia paga del template.
@@ -53,14 +53,14 @@ antes de confiar en lo que se ve.
 - Capturas reales tomadas en vivo: clinicavitelia.cl (hero + tratamientos) y
   rodolforjs.github.io/rodolforojas (hero + "En Cartelera"), guardadas en
   `image/portfolio/`.
-- `portofolio-detail.html` reescrito para el caso Clínica Vitelia: proceso,
+- `portfolio-detail.html` reescrito para el caso Clínica Vitelia: proceso,
   qué incluye, resultado, link real al sitio (clinicavitelia.cl).
-- Nueva página `portofolio-detail-personal.html` (duplicada del template
+- Nueva página `portfolio-detail-personal.html` (duplicada del template
   de detalle) para el caso "Mi Portafolio": proyecto propio de diseño+
   desarrollo completo (no cliente pagado, aclarado en el copy), con link
   real a rodolforjs.github.io/rodolforojas.
 - Ambas páginas se linkean cruzadas entre sí ("Otro Caso" en el sidebar) y
-  desde `portofolio.html` (miniaturas ya actualizadas con las capturas
+  desde `portfolio.html` (miniaturas ya actualizadas con las capturas
   reales).
 
 ## Paleta de color (2026-09-26)
@@ -98,7 +98,7 @@ original — sobre índigo se veía como un bloque negro sólido. Ajustado el
 degradado a tonos de índigo cercanos al fondo para que vuelva a fundirse
 igual que antes.
 
-Verificado visualmente en index.html y portofolio.html (incluye tarjetas
+Verificado visualmente en index.html y portfolio.html (incluye tarjetas
 con overlay y botones circulares) — todo legible y coherente. Los hex son
 aproximados a ojo desde la referencia, no sampleados exactos (mismo
 criterio que el banco de paletas.md del registro de negocio).
@@ -164,5 +164,5 @@ simplificación"). Resumen de lo hecho en esta pasada:
    (contacto real, quitar "Prositus by Rometheme").
 2. Logo propio (hoy sigue diciendo "REBOOST" en el header).
 3. Definir nombre de marca final (o seguir con "Rodolfo Web").
-4. Reskin de las demás páginas (about-us, services, portofolio-detail,
+4. Reskin de las demás páginas (about-us, services, portfolio-detail,
    team, pricing-plan, faqs, contact-us) siguiendo el mismo criterio.

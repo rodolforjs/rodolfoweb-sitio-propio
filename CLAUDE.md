@@ -14,8 +14,8 @@ NUNCA editar ahí — este proyecto es la copia de trabajo en
 `HTML_TEMPLATE/`).
 
 Verificado con contenido real: hero de fábrica es "Social Media Management
-& Creative Agency for Businesses & Brands" — páginas services, portofolio,
-portofolio-detail, team, pricing-plan, about-us, faqs, contact-us, blog.
+& Creative Agency for Businesses & Brands" — páginas services, portfolio,
+portfolio-detail, team, pricing-plan, about-us, faqs, contact-us, blog.
 
 ## Regla de reskin (no reestructurar)
 Solo colores/textos/imágenes al reskinnear — cero cambios de estructura,
@@ -74,8 +74,8 @@ Equipo, Beneficios, Contacto (+ Inicio) — "no más que eso".
 - Nav en todas las páginas: Inicio / Proyectos / Equipo / Beneficios /
   Contacto. Beneficios es un ancla (`index.html#beneficios`), no página
   aparte.
-- Páginas activas/enlazadas: `index.html`, `portofolio.html`,
-  `portofolio-detail.html`, `portofolio-detail-personal.html`,
+- Páginas activas/enlazadas: `index.html`, `portfolio.html`,
+  `portfolio-detail.html`, `portfolio-detail-personal.html`,
   `team.html`, `contact-us.html`.
 - Páginas huérfanas (archivo sigue existiendo, ya no enlazadas desde
   ningún nav — decisión: no borrarlas, solo desvincularlas, por si se
@@ -116,8 +116,8 @@ Pendiente que él lo reemplace o lo pase para actualizarlo.**
 
 **Textos giratorios "CREATIVE. STRATEGIC. PROFESSIONAL." (decorativos,
 aparecen 2-3 veces por página):** traducidos a "DISEÑO. CÓDIGO.
-DETALLE." en las 6 páginas activas (index, team, portofolio, las 2
-portofolio-detail, contact-us). Las páginas huérfanas quedaron sin tocar
+DETALLE." en las 6 páginas activas (index, team, portfolio, las 2
+portfolio-detail, contact-us). Las páginas huérfanas quedaron sin tocar
 (no es prioridad, no se enlazan desde ningún lado).
 
 ## Equipo real + ajustes de footer (2026-10-02, misma sesión)
@@ -168,7 +168,7 @@ en el que ella no participó).
 **Pendiente/gaps conocidos (actualizado 2026-10-03):**
 - Resuelto: la sección "Clientes" duplicada dentro de `index.html` ya no
   tiene las tarjetas fake "Vision Tech Solutions" — ahora muestra los
-  mismos 2 casos reales que `portofolio.html` (ver más abajo).
+  mismos 2 casos reales que `portfolio.html` (ver más abajo).
 - Resuelto: "Pricing Plan" (precios de suscripción falsos) reemplazado
   por sección "Cómo Trabajamos" (proceso en 4 pasos, sin precios
   inventados). FAQ traducido con preguntas reales. Blog (posts falsos)
@@ -176,7 +176,7 @@ en el que ella no participó).
   junto con toda la sección "Beneficios".
 - **Grilla de Clientes — decisión para cuando haya más casos (Rodolfo,
   2026-10-03):** hoy la grilla de 2 tarjetas (en `index.html` y
-  `portofolio.html`) está bien así con solo 2 casos reales, pero cuando
+  `portfolio.html`) está bien así con solo 2 casos reales, pero cuando
   haya más clientes, volver a la grilla original de Reboost (mosaico de
   3 columnas, la que tenía 7 tarjetas antes de reducirla) en vez de
   seguir en 2 columnas simples.
@@ -190,3 +190,13 @@ en el que ella no participó).
 - Contacto: Netlify Forms o Web3Forms/Formspree (por definir, sitio no
   está en Netlify por ahora).
 - Sin agenda/booking — este sitio no la necesita, es presencia de agencia.
+
+## Revisión externa y correcciones (2026-10-09)
+- **Copy:** se sacó «sin plantillas / a medida» de las páginas activas (el sitio y el de Vitelia parten de templates comprados): ahora «diseño personalizado para tu negocio». «Plan a Medida» pasó a «Plan Personalizado». Evitar volver a prometer «único», «sin plantillas», «no genérico».
+- **Redes:** Instagram y LinkedIn de la agencia están ocultos (`d-none` + `data-oculto="pendiente"`) hasta que existan; también la tarjeta de Instagram de Contacto. Para reactivarlos, quitar `d-none` y poner el link real.
+- **Contacto:** el formulario va primero, las tarjetas (dónde, correo, WhatsApp) debajo; se eliminó el bloque «Síguenos en redes».
+- **Archivos:** imágenes sin espacios (`site-logo.png`, `icon-1.png`…); `portofolio*.html` → `portfolio*.html`.
+- **Accesibilidad:** el texto circular «Escribe y resolvemos» es `aria-hidden` (la letra por letra es el efecto visual) y el enlace tiene `aria-label`; tooltips con «i» marcados; alts en logos que son enlaces.
+- **Compartir:** `og:image` propio (`image/og-compas.png`, 1200×630); los casos usan su captura.
+- **404** traducida al español (el título quedaba invisible por la animación).
+- Precios publicados: Vitrina $245.000 y Agenda $295.000.
