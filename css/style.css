@@ -6079,3 +6079,104 @@ main .section:has(.sub-heading.position-absolute):not(.bg-image) {
     backdrop-filter: blur(11px);
     -webkit-backdrop-filter: blur(11px);
 }
+
+/* Título h1 con el tamaño visual de un h3 (contacto) */
+.title-h3 {
+    font-size: 56px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .title-h3 {
+        font-size: 28px;
+    }
+}
+
+/* Dropdown propio del formulario (reemplaza al select nativo) */
+.custom-select {
+    position: relative;
+}
+
+.custom-select__btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--text-color-2);
+    padding: 1rem 1.5rem 0.6rem;
+    color: var(--text-color-2);
+    font-family: var(--font-1);
+    font-size: 1rem;
+    text-align: left;
+}
+
+.custom-select__btn .custom-select__label.has-value {
+    color: var(--accent-color);
+}
+
+.custom-select__btn i {
+    transition: transform 0.2s ease;
+}
+
+.custom-select.is-open .custom-select__btn,
+.custom-select__btn:focus-visible {
+    outline: none;
+    border-bottom-color: var(--accent-color);
+}
+
+.custom-select.is-open .custom-select__btn i {
+    transform: rotate(180deg);
+}
+
+.custom-select__list {
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    right: 0;
+    top: calc(100% + 0.5rem);
+    margin: 0;
+    padding: 0.5rem;
+    list-style: none;
+    background: var(--background-color);
+    border: 1px solid var(--accent-color-2);
+    border-radius: 0.75rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.45);
+}
+
+.custom-select__list[hidden] {
+    display: none;
+}
+
+.custom-select__list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.custom-select__list li small {
+    color: var(--text-color-2);
+    font-size: 0.8rem;
+}
+
+.custom-select__list li.is-active {
+    background: var(--color-1);
+}
+
+.custom-select__list li.is-selected {
+    color: var(--accent-color);
+}
+
+.custom-select.is-invalid .custom-select__btn {
+    border-bottom-color: #dc3545;
+}
+
+.custom-select.is-invalid .invalid-feedback {
+    display: block;
+}
