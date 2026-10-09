@@ -5990,3 +5990,42 @@ main .section:has(.sub-heading.position-absolute):not(.bg-image) {
         padding-bottom: 5rem;
     }
 }
+
+/* Planes: tarjetas parejas, lista completa y botón anclado abajo */
+.sec-planes .plan-card {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.sec-planes .plan-card:hover {
+    transform: translateY(-8px);
+}
+
+.sec-planes .plan-card .card-pricing-detail p {
+    line-height: 1.35;
+}
+
+.sec-planes .plan-cta {
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+
+.sec-planes .plan-cta .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    border-radius: 999px;
+}
+
+.sec-planes .bg-accent-color-4 .plan-cta .btn {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+.sec-planes .bg-accent-color-4 .plan-cta .btn i {
+    color: var(--background-color);
+}
