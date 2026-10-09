@@ -6071,3 +6071,11 @@ main .section:has(.sub-heading.position-absolute):not(.bg-image) {
         white-space: nowrap;
     }
 }
+
+/* Menú hamburguesa abierto (o animándose): el header necesita fondo para que los links se lean */
+#header:has(.navbar-collapse.show),
+#header:has(.navbar-collapse.collapsing) {
+    background: var(--background-color);
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+}
