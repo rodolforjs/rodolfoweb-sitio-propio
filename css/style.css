@@ -4656,7 +4656,12 @@ a {
         text-align: center;
     }
 
+    /* Mismo comportamiento que desktop: transparente arriba, fondo solo al hacer scroll (.glass-effect) */
     #header {
+        background: transparent;
+    }
+
+    #header.glass-effect {
         background: var(--background-color);
         backdrop-filter: blur(11px);
         -webkit-backdrop-filter: blur(11px);
