@@ -6055,3 +6055,14 @@ main .section:has(.sub-heading.position-absolute):not(.bg-image) {
     margin-top: 0;
     padding-top: 0;
 }
+
+/* Título de Planes en una sola línea en escritorio */
+.plans-title {
+    max-width: none;
+}
+
+@media (min-width: 768px) {
+    .plans-title {
+        white-space: nowrap;
+    }
+}
