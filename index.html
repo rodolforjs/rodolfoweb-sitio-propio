@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="image/icon.png">
-    <link rel="stylesheet" href="css/style.css?v=20261008s" />
+    <link rel="stylesheet" href="css/style.css?v=20261008t" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/shishirraven/animate-on-scroll@v1.2/animation_utility.css" />
@@ -334,7 +334,7 @@
                                     </div>
                                     <div class="card-pricing-detail">
                                         <i class="rtmicon rtmicon-check"></i>
-                                        <p class="m-0">SEO básico (meta tags y sitemap)</p>
+                                        <p class="m-0">SEO optimizado</p>
                                     </div>
                                     <div class="card-pricing-detail">
                                         <i class="rtmicon rtmicon-check"></i>
@@ -346,7 +346,7 @@
                                     </div>
                                         </div>
                                     </div>
-                                    <a class="plan-toggle collapsed accent-color" data-bs-toggle="collapse"
+                                    <a class="plan-toggle collapsed accent-color"
                                         href="#planLandingMore" role="button" aria-expanded="false"
                                         aria-controls="planLandingMore">
                                         <span class="text-more">Ver todas las características</span>
@@ -387,7 +387,8 @@
                                     </div>
                                     <div class="card-pricing-detail">
                                         <i class="rtmicon rtmicon-check"></i>
-                                        <p class="m-0">Agenda integrada (Cal.com, Agendapro o Reservo)</p>
+                                        <p class="m-0">Integración de tu agenda (Cal.com, Agendapro o Reservo)</p>
+                                        <span class="info-tooltip">i<span class="info-tooltip-text">Si ya usas un sistema de reservas, lo integramos a tu sitio. Si aún no tienes uno, te ayudamos a configurarlo; las suscripciones de pago de esos servicios las contrata el cliente.</span></span>
                                     </div>
                                     <div class="card-pricing-detail">
                                         <i class="rtmicon rtmicon-check"></i>
@@ -429,7 +430,7 @@
                                     </div>
                                     <div class="card-pricing-detail">
                                         <i class="rtmicon rtmicon-check"></i>
-                                        <p class="m-0">SEO básico (meta tags y sitemap)</p>
+                                        <p class="m-0">SEO optimizado</p>
                                     </div>
                                     <div class="card-pricing-detail">
                                         <i class="rtmicon rtmicon-check"></i>
@@ -445,7 +446,7 @@
                                     </div>
                                         </div>
                                     </div>
-                                    <a class="plan-toggle collapsed accent-color" data-bs-toggle="collapse"
+                                    <a class="plan-toggle collapsed accent-color"
                                         href="#planAgendaMore" role="button" aria-expanded="false"
                                         aria-controls="planAgendaMore">
                                         <span class="text-more">Ver todas las características</span>
@@ -522,7 +523,7 @@
                                     </div>
                                     <div class="card-pricing-detail">
                                         <i class="rtmicon rtmicon-check"></i>
-                                        <p class="m-0">SEO básico (meta tags y sitemap)</p>
+                                        <p class="m-0">SEO optimizado</p>
                                     </div>
                                     <div class="card-pricing-detail">
                                         <i class="rtmicon rtmicon-check"></i>
@@ -546,7 +547,7 @@
                                     </div>
                                         </div>
                                     </div>
-                                    <a class="plan-toggle collapsed accent-color" data-bs-toggle="collapse"
+                                    <a class="plan-toggle collapsed accent-color"
                                         href="#planMedidaMore" role="button" aria-expanded="false"
                                         aria-controls="planMedidaMore">
                                         <span class="text-more">Ver todas las características</span>
@@ -855,7 +856,7 @@
                                         class="d-flex flex-lg-row flex-column gap-3 align-items-start justify-content-between">
                                         <p class="card-overlay-desc" style="max-width: 60%;">
                                             Sitio completo desde cero para una clínica de medicina estética:
-                                            dominio propio, agenda integrada y SEO básico, en producción.
+                                            dominio propio, agenda integrada y SEO optimizado, en producción.
                                         </p>
                                         <div class="d-flex flex-column align-items-center gap-2" style="width: 104px;">
                                             <a href="https://clinicavitelia.cl" target="_blank" rel="noopener"
@@ -970,7 +971,7 @@
                                     <div class="accordion-body">
                                         Sí. No nos limitamos a un rubro — nos adaptamos según lo que tu negocio
                                         necesite: agenda integrada, tienda online, formularios de contacto,
-                                        SEO básico, integraciones con WhatsApp o redes. Conversamos tu caso y
+                                        SEO optimizado, integraciones con WhatsApp o redes. Conversamos tu caso y
                                         armamos la combinación de funciones que tiene sentido para ti, no una
                                         plantilla genérica.
                                     </div>
@@ -1149,6 +1150,29 @@
     <script src="js/scroll-reveal.js"></script>
     <script src="https://kit.fontawesome.com/a6df7668b8.js" crossorigin="anonymous"></script>
     <script src=" js/vendor/fslightbox.js"></script>
+<script>
+    // Planes: "Ver todas las características" abre o cierra las tres tarjetas a la vez.
+    (function () {
+        var toggles = document.querySelectorAll('.sec-planes .plan-toggle');
+        var panels = document.querySelectorAll('.sec-planes .collapse');
+        if (!toggles.length || !window.bootstrap) return;
+        var open = false;
+        toggles.forEach(function (t) {
+            t.addEventListener('click', function (e) {
+                e.preventDefault();
+                open = !open;
+                panels.forEach(function (p) {
+                    var c = bootstrap.Collapse.getOrCreateInstance(p, { toggle: false });
+                    open ? c.show() : c.hide();
+                });
+                toggles.forEach(function (x) {
+                    x.classList.toggle('collapsed', !open);
+                    x.setAttribute('aria-expanded', open ? 'true' : 'false');
+                });
+            });
+        });
+    })();
+</script>
 </body>
 
 </html>
