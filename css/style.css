@@ -6181,8 +6181,11 @@ main .section:has(.sub-heading.position-absolute):not(.bg-image) {
     display: block;
 }
 
-/* Correo del footer oculto por ahora (conserva el espacio para no mover el logo).
-   Para volver a mostrarlo: borrar esta regla. */
-.footer-email {
-    visibility: hidden;
+/* Correo del footer: enlace mailto, hereda el estilo del h5 */
+.footer-email a {
+    color: inherit;
+    text-decoration: none;
+}
+.footer-email a:hover {
+    color: var(--accent-color);
 }
