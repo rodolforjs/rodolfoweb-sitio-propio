@@ -6189,3 +6189,39 @@ main .section:has(.sub-heading.position-absolute):not(.bg-image) {
 .footer-email a:hover {
     color: var(--accent-color);
 }
+
+/* Móvil: tarjetas de contacto y barra inferior del footer */
+@media only screen and (max-width: 599px) {
+    .card-service .d-flex {
+        min-width: 0;
+    }
+
+    .card-service .d-flex p {
+        min-width: 0;
+        font-size: clamp(0.875rem, 4vw, 1rem);
+        overflow-wrap: anywhere;
+    }
+
+    footer hr + .d-flex {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.75rem;
+    }
+
+    footer hr + .d-flex p,
+    footer hr + .d-flex a,
+    footer hr + .d-flex span {
+        font-size: 0.8125rem;
+        line-height: 1.5;
+    }
+
+    footer hr + .d-flex > div {
+        flex-wrap: wrap;
+        column-gap: 1rem;
+        row-gap: 0.25rem;
+    }
+
+    footer hr + .d-flex span {
+        display: none;
+    }
+}
