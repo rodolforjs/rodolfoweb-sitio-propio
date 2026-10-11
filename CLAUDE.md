@@ -193,7 +193,7 @@ en el que ella no participó).
 
 ## Revisión externa y correcciones (2026-10-09)
 - **Copy:** se sacó «sin plantillas / a medida» de las páginas activas (el sitio y el de Vitelia parten de templates comprados): ahora «diseño personalizado para tu negocio». «Plan a Medida» pasó a «Plan Personalizado». Evitar volver a prometer «único», «sin plantillas», «no genérico».
-- **Redes:** Instagram y LinkedIn de la agencia están ocultos (`d-none` + `data-oculto="pendiente"`) hasta que existan; también la tarjeta de Instagram de Contacto. Para reactivarlos, quitar `d-none` y poner el link real.
+- **Redes:** Instagram de la agencia activo: https://www.instagram.com/compas.web/ (footer, tarjeta de Contacto, todas las páginas). LinkedIn sigue oculto (`d-none` + `data-oculto="pendiente"`) hasta que exista; para reactivarlo, quitar `d-none` y poner el link real.
 - **Contacto:** el formulario va primero, las tarjetas (dónde, correo, WhatsApp) debajo; se eliminó el bloque «Síguenos en redes».
 - **Archivos:** imágenes sin espacios (`site-logo.png`, `icon-1.png`…); `portofolio*.html` → `portfolio*.html`.
 - **Accesibilidad:** el texto circular «Escribe y resolvemos» es `aria-hidden` (la letra por letra es el efecto visual) y el enlace tiene `aria-label`; tooltips con «i» marcados; alts en logos que son enlaces.
