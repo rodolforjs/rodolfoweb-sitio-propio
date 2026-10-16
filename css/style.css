@@ -5328,6 +5328,10 @@ a {
         order: 2 !important;
     }
 
+    main.home-main .sec-compare {
+        order: 3 !important;
+    }
+
     main.home-main .sec-about {
         order: 3 !important;
     }
