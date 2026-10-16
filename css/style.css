@@ -6254,3 +6254,23 @@ footer hr + .d-flex p,
 footer hr + .d-flex a,
 footer hr + .d-flex span { font-size: 0.95rem; }
 .footer-links__about { font-size: 0.95rem; }
+
+/* Comparación: página económica vs Compas */
+.compare { max-width: 1040px; margin: 0 auto; padding: 2.5rem 2.75rem; border: 1px solid rgba(192, 146, 241, 0.35); border-radius: 20px; background: var(--color-1); }
+.compare__title { margin: 0 0 1rem; font-size: clamp(1.5rem, 2.4vw, 2rem); }
+.compare__lead { margin: 0 0 2rem; max-width: 780px; color: var(--text-color-2); }
+.compare__row { display: grid; grid-template-columns: 1.1fr 1fr 1.4fr; gap: 1.25rem; padding: 0.95rem 0; border-bottom: 1px solid rgba(192, 146, 241, 0.2); }
+.compare__head { border-bottom-color: rgba(192, 146, 241, 0.5); }
+.compare__head .compare__cell { font-size: 0.8125rem; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; }
+.compare__label { color: var(--text-color); }
+.compare__other { color: rgba(255, 255, 255, 0.62); }
+.compare__us { color: var(--accent-color); font-weight: 500; }
+.compare__cell { font-size: 0.95rem; }
+.compare__foot { margin: 1.75rem 0 0; color: var(--text-color); }
+@media only screen and (max-width: 767px) {
+    .compare { padding: 1.5rem 1.25rem; }
+    .compare__row { grid-template-columns: 1fr 1fr; gap: 0.25rem 1rem; padding: 0.85rem 0; }
+    .compare__label { grid-column: 1 / -1; font-weight: 600; }
+    .compare__head .compare__label { display: none; }
+    .compare__cell { font-size: 0.875rem; }
+}
