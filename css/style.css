@@ -6399,3 +6399,11 @@ footer hr + .d-flex span { font-size: 0.95rem; }
     .compare__row:not(.compare__head) .compare__other { display: block; }
     .compare__other::before { margin-right: 0.15rem; }
 }
+
+/* FAQ en móvil: ancho completo, preguntas más chicas y menos aire entre ítems */
+@media only screen and (max-width: 767px) {
+    .sec-faqs .w-75 { width: 100% !important; }
+    .sec-faqs .accordion { gap: 0 !important; }
+    .accordion .accordion-button { font-size: 18px; line-height: 1.35; padding-block: 1rem; gap: 0.75rem; }
+    .accordion .accordion-body { font-size: 15px; }
+}
