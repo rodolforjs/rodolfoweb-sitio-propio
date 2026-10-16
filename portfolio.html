@@ -213,69 +213,44 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row row-cols-lg-3 row-cols-1">
-                        <div class="col mb-3">
-                            <div class="card">
-                                <img src="image/portfolio/vitelia-hero.jpg" alt="Clínica Vitelia"
-                                    style="object-fit: cover; aspect-ratio: 1/1;" loading="lazy" decoding="async">
-                                <div class="image-overlay">
-                                    <div class="d-flex flex-column gap-5">
-                                        <div class="d-flex flex-row gap-5">
-                                            <span class="p-0 text-color">2026</span>
-                                            <span class="p-0 text-color">Web con Agenda</span>
-                                        </div>
-                                        <h4 style="max-width: 60%;">Clínica Vitelia</h4>
-                                    </div>
-                                    <div
-                                        class="d-flex flex-lg-row flex-column gap-3 align-items-start justify-content-between">
-                                        <p class="card-overlay-desc" style="max-width: 60%;">
-                                            Sitio completo desde cero para una clínica de medicina estética:
-                                            dominio propio, agenda integrada y SEO optimizado, en producción.
-                                        </p>
-                                        <div class="d-flex flex-column align-items-center gap-2" style="width: 104px;">
-                                            <a href="https://clinicavitelia.cl" target="_blank" rel="noopener"
-                                                class="small-text btn-accent-2 text-center card-overlay-weblink" style="width: 100%;">Ver
-                                                Web</a>
-                                            <a href="portfolio-detail.html" class="icon-box-4" style="width: 100%; display: flex; justify-content: center;">
-                                                <i class="rtmicon rtmicon-arrow-up-right fw-bold background-color"></i>
-                                                <span class="visually-hidden">Ver caso: Clínica Vitelia</span>
-                                            </a>
-                                        </div>
+                    <div class="case-slider" data-case-slider>
+                        <div class="case-slider__track">
+                            <article class="case-slide is-active">
+                                <div class="case-slide__media">
+                                    <img src="image/portfolio/vitelia-hero.jpg" alt="Clínica Vitelia" decoding="async">
+                                </div>
+                                <div class="case-slide__card">
+                                    <h4>Clínica Vitelia</h4>
+                                    <div class="case-slide__meta"><span>2026</span><span>Sitio con agenda</span><span>La Ligua</span></div>
+                                    <p>Sitio completo desde cero para una clínica de medicina estética: dominio propio, agenda integrada y SEO optimizado, en producción.</p>
+                                    <div class="case-slide__actions">
+                                        <a class="btn btn-accent" href="portfolio-detail.html">Ver caso</a>
+                                        <a class="btn btn-accent-3" href="https://clinicavitelia.cl" target="_blank" rel="noopener">Ver sitio</a>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
+                            <article class="case-slide">
+                                <div class="case-slide__media">
+                                    <img src="image/portfolio/portfolio-hero.jpg" alt="Portafolio Cinemático" loading="lazy" decoding="async">
+                                </div>
+                                <div class="case-slide__card">
+                                    <h4>Portafolio Cinemático</h4>
+                                    <div class="case-slide__meta"><span>2026</span><span>Portafolio personal</span><span>6 páginas</span></div>
+                                    <p>Dos meses de trabajo de punta a punta: concepto cinematográfico, sistema de diseño propio y animaciones personalizadas en 6 páginas completas.</p>
+                                    <div class="case-slide__actions">
+                                        <a class="btn btn-accent" href="portfolio-detail-personal.html">Ver caso</a>
+                                        <a class="btn btn-accent-3" href="https://rodolforjs.github.io/rodolforojas/" target="_blank" rel="noopener">Ver sitio</a>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
-                        <div class="col mb-3">
-                            <div class="card">
-                                <img src="image/portfolio/portfolio-hero-square.jpg" class="img-fluid" alt="Portafolio personal"
-                                    style="aspect-ratio: 1/1; object-fit: cover;" loading="lazy" decoding="async">
-                                <div class="image-overlay">
-                                    <div class="d-flex flex-column gap-5">
-                                        <div class="d-flex flex-row gap-5">
-                                            <span class="p-0 text-color">2026</span>
-                                            <span class="p-0 text-color">Caso real</span>
-                                        </div>
-                                        <h4 style="max-width: 60%;">Portafolio Cinemático</h4>
-                                    </div>
-                                    <div
-                                        class="d-flex flex-lg-row flex-column gap-3 align-items-start justify-content-between">
-                                        <p class="card-overlay-desc" style="max-width: 60%;">
-                                            Dos meses de trabajo de punta a punta: concepto cinematográfico,
-                                            sistema de diseño propio y animaciones a medida en 6 páginas
-                                            completas.
-                                        </p>
-                                        <div class="d-flex flex-column align-items-center gap-2" style="width: 104px;">
-                                            <a href="https://rodolforjs.github.io/rodolforojas/" target="_blank" rel="noopener"
-                                                class="small-text btn-accent-2 text-center card-overlay-weblink" style="width: 100%;">Ver
-                                                Web</a>
-                                            <a href="portfolio-detail-personal.html" class="icon-box-4" style="width: 100%; display: flex; justify-content: center;">
-                                                <i class="rtmicon rtmicon-arrow-up-right fw-bold background-color"></i>
-                                                <span class="visually-hidden">Ver caso: Portafolio Cinemático</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="case-slider__nav">
+                            <button type="button" class="case-slider__arrow" data-dir="-1" aria-label="Caso anterior"><i class="rtmicon rtmicon-arrow-left"></i></button>
+                            <div class="case-slider__dots">
+                                <button type="button" class="is-active" aria-label="Ver caso 1"></button>
+                                <button type="button" aria-label="Ver caso 2"></button>
                             </div>
+                            <button type="button" class="case-slider__arrow" data-dir="1" aria-label="Caso siguiente"><i class="rtmicon rtmicon-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -283,140 +258,6 @@
         </div>
         <!-- End Our Services -->
 
-        <!-- Testimonials -->
-        <!-- TODO: testimonios de ejemplo (nombres y frases ficticios). Reemplazar por testimonios reales de clientes antes de promocionar el sitio. -->
-        <div class="section position-relative">
-            <div class="r-container">
-                <div class="d-flex flex-column">
-                    <div class="sub-heading text-accent second position-absolute"
-                        style="z-index: -1; top: -2%; right: 11%;">
-                        TESTIMONIOS</div>
-                    <h3 class="text-xl-start text-center scrollanimation animated fadeInDown adr-9">
-                        HISTORIAS DE ÉXITO DE
-                    </h3>
-                    <div class="d-flex flex-xl-row flex-column align-items-center justify-content-between gap-3">
-                        <h3 class="scrollanimation animated fadeInDown adr-9 adl-1">
-                            NUESTROS CLIENTES
-                        </h3>
-                        <div class="border-bottom border-4" style="width: 246px;"></div>
-                        <p class="scrollanimation animated fadeInDown adr-9 adl-2">
-                            De la idea a la página en línea: así hemos <br> ayudado a nuestros clientes a destacar en internet.
-                        </p>
-                    </div>
-                    <div class="overflow-hidden">
-                        <div class="swiper swiperTestimonials">
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide">
-                                    <div class="card testimonial-container justify-content-center align-items-center">
-                                        <div class="card-testimonial">
-                                            <hr class="border-up">
-                                            <div class="d-flex flex-row gap-2">
-                                                <i class="rtmicon rtmicon-blockquote" style="font-size: 32px"></i>
-                                                <p class="testimonial-text">
-                                                    Entendieron nuestra visión y la ejecutaron a la perfección. ¡Nuestra página web nunca se había visto mejor!
-                                                </p>
-                                            </div>
-                                            <div class="d-flex flex-row align-items-start gap-2">
-                                                <hr class="accent-color" style="width: 32px;">
-                                                <div class="d-flex flex-column gap-1 align-items-start">
-                                                    <h5 class="m-0 text-color">MATÍAS CARRASCO</h5>
-                                                    <p>Dueño de negocio</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card testimonial-container justify-content-center align-items-center">
-                                        <div class="card-testimonial">
-                                            <hr class="border-up">
-                                            <div class="d-flex flex-row gap-2">
-                                                <i class="rtmicon rtmicon-blockquote" style="font-size: 32px"></i>
-                                                <p class="testimonial-text">
-                                                    Este servicio cambió cómo nos presentamos en internet. Las consultas se dispararon y vimos resultados reales en pocas semanas.
-                                                </p>
-                                            </div>
-                                            <div class="d-flex flex-row align-items-start gap-2">
-                                                <hr class="accent-color" style="width: 32px;">
-                                                <div class="d-flex flex-column gap-1 align-items-start">
-                                                    <h5 class="m-0 text-color">ROBERTO ESPINOZA</h5>
-                                                    <p>Consultor corporativo</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card testimonial-container justify-content-center align-items-center">
-                                        <div class="card-testimonial">
-                                            <hr class="border-up">
-                                            <div class="d-flex flex-row gap-2">
-                                                <i class="rtmicon rtmicon-blockquote" style="font-size: 32px"></i>
-                                                <p class="testimonial-text">
-                                                    El equipo hizo todo muy fácil de entender. Ahora nuestra página web funciona de forma fluida y eficiente.
-                                                </p>
-                                            </div>
-                                            <div class="d-flex flex-row align-items-start gap-2">
-                                                <hr class="accent-color" style="width: 32px;">
-                                                <div class="d-flex flex-column gap-1 align-items-start">
-                                                    <h5 class="m-0 text-color">DANIEL FUENTES</h5>
-                                                    <p>Gerente de marca</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card testimonial-container justify-content-center align-items-center">
-                                        <div class="card-testimonial">
-                                            <hr class="border-up">
-                                            <div class="d-flex flex-row gap-2">
-                                                <i class="rtmicon rtmicon-blockquote" style="font-size: 32px"></i>
-                                                <p class="testimonial-text">
-                                                    Como negocio nuevo, necesitábamos una web accesible pero efectiva. Su equipo superó nuestras expectativas con un soporte excelente y resultados medibles.
-                                                </p>
-                                            </div>
-                                            <div class="d-flex flex-row align-items-start gap-2">
-                                                <hr class="accent-color" style="width: 32px;">
-                                                <div class="d-flex flex-column gap-1 align-items-start">
-                                                    <h5 class="m-0 text-color">GUILLERMO TAPIA</h5>
-                                                    <p>Emprendedor tecnológico</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="card testimonial-container justify-content-center align-items-center">
-                                        <div class="card-testimonial">
-                                            <hr class="border-up">
-                                            <div class="d-flex flex-row gap-2">
-                                                <i class="rtmicon rtmicon-blockquote" style="font-size: 32px"></i>
-                                                <p class="testimonial-text">
-                                                    Este servicio cambió cómo nos presentamos en internet. Las consultas se dispararon y vimos resultados reales en pocas semanas.
-                                                </p>
-                                            </div>
-                                            <div class="d-flex flex-row align-items-start gap-2">
-                                                <hr class="accent-color" style="width: 32px;">
-                                                <div class="d-flex flex-column gap-1 align-items-start">
-                                                    <h5 class="m-0 text-color">ROBERTO ESPINOZA</h5>
-                                                    <p>Consultor corporativo</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- If we need pagination -->
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Testimonials -->
     </main>
     <!-- End Main -->
 
@@ -530,6 +371,24 @@
     <script src="js/scroll-reveal.js"></script>
     <script src="https://kit.fontawesome.com/a6df7668b8.js" crossorigin="anonymous"></script>
     <script src=" js/vendor/fslightbox.js"></script>
+    <script>
+        (function () {
+            var root = document.querySelector('[data-case-slider]');
+            if (!root) return;
+            var slides = root.querySelectorAll('.case-slide');
+            var dots = root.querySelectorAll('.case-slider__dots button');
+            var i = 0;
+            function go(n) {
+                i = (n + slides.length) % slides.length;
+                slides.forEach(function (s, k) { s.classList.toggle('is-active', k === i); });
+                dots.forEach(function (d, k) { d.classList.toggle('is-active', k === i); });
+            }
+            root.querySelectorAll('.case-slider__arrow').forEach(function (b) {
+                b.addEventListener('click', function () { go(i + Number(b.dataset.dir)); });
+            });
+            dots.forEach(function (d, k) { d.addEventListener('click', function () { go(k); }); });
+        })();
+    </script>
 </body>
 
 </html>
