@@ -6225,3 +6225,17 @@ main .section:has(.sub-heading.position-absolute):not(.bg-image) {
         display: none;
     }
 }
+
+/* Footer: columnas de enlaces */
+.footer-links { padding: 2.5rem 0 1rem; }
+.footer-links__title { font-size: 0.8125rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-color); margin-bottom: 1rem; }
+.footer-links__list { list-style: none !important; margin: 0 !important; padding: 0 !important; display: flex; flex-direction: column; gap: 0.6rem; }
+.footer-links__list a { font-size: 0.95rem; overflow-wrap: anywhere; }
+.footer-links__about { max-width: 320px; margin: 0 0 0.75rem; }
+.footer-links__note { font-size: 0.8125rem; margin: 0; opacity: 0.85; }
+.footer-links a.text-color-2:hover { color: var(--text-color) !important; }
+@media only screen and (max-width: 599px) {
+    .footer-links { padding-top: 1.5rem; text-align: left; }
+    .footer-links__about { max-width: none; }
+}
+.footer-links__list li { margin: 0; padding: 0; }
