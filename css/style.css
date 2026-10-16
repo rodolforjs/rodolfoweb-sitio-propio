@@ -6532,3 +6532,22 @@ p { font-size: 1rem; }
     .hero-gf__lead { font-size: 1.0625rem; }
     .price-text, .sec-planes .plan-card .price-text { font-size: 2.25rem; }
 }
+
+/* CTA final en móvil: tarjeta con la paleta del sitio, texto a ancho completo,
+   sin columnas vacías ni flecha suelta, botones apilados al mismo ancho */
+@media only screen and (max-width: 767px) {
+    .cta-card {
+        padding: 2.5rem 1.5rem !important;
+        gap: 1.5rem !important;
+        background: var(--color-1);
+        border: 1px solid rgba(192, 146, 241, 0.35);
+        border-radius: 20px !important;
+    }
+    .cta-card .cta-text { font-size: 1.75rem; line-height: 1.15 !important; }
+    .cta-card .row { margin: 0; padding: 0 !important; }
+    .cta-card .row > .col-2 { display: none; }
+    .cta-card .row > .col-8 { width: 100%; margin: 0 !important; padding: 0; }
+    .cta-card p br { display: none; }
+    .cta-card .btn { width: 100%; max-width: 320px; text-align: center; }
+    .cta-card .btn.cta { width: 100%; max-width: 320px; }
+}
