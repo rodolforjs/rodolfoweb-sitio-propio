@@ -6258,6 +6258,9 @@ main .section:has(.sub-heading.position-absolute):not(.bg-image) {
 /* Footer integrado: logo + columnas en una sola composición */
 .footer-links { padding: 3rem 0 1.5rem; }
 .footer-links__logo { width: 100%; max-width: 230px; height: auto; display: block; margin-bottom: 1.25rem; }
+@media only screen and (max-width: 767px) {
+    .footer-links__logo { display: none; }
+}
 .footer-links__mail { color: var(--text-color); font-size: 1rem; font-weight: 500; overflow-wrap: anywhere; }
 .footer-links__mail:hover { color: var(--accent-color); }
 
