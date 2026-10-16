@@ -6245,3 +6245,12 @@ main .section:has(.sub-heading.position-absolute):not(.bg-image) {
 .footer-links__logo { width: 100%; max-width: 230px; height: auto; display: block; margin-bottom: 1.25rem; }
 .footer-links__mail { color: var(--text-color); font-size: 1rem; font-weight: 500; overflow-wrap: anywhere; }
 .footer-links__mail:hover { color: var(--accent-color); }
+
+/* Footer: CTA superior 15% más chico y barra legal con el mismo tamaño que el resto del footer */
+@media only screen and (min-width: 600px) {
+    .footer-cta { zoom: 0.85; }
+}
+footer hr + .d-flex p,
+footer hr + .d-flex a,
+footer hr + .d-flex span { font-size: 0.95rem; }
+.footer-links__about { font-size: 0.95rem; }
