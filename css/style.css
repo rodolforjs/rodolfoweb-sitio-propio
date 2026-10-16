@@ -6321,3 +6321,20 @@ footer hr + .d-flex span { font-size: 0.95rem; }
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
 }
+
+/* Móvil: menú abierto compacto (enlaces alineados, con separadores y aire bajo el logo) */
+@media only screen and (max-width: 1199px) {
+    #header .navbar-collapse { margin-top: 0.75rem; }
+    #header .navbar-nav { gap: 0 !important; margin: 0 0 0.5rem !important; align-items: stretch; }
+    #header .navbar-nav .nav-item { border-top: 1px solid rgba(192, 146, 241, 0.2); }
+    #header .navbar-nav .nav-link { text-align: left; padding: 0.8rem 0 !important; font-size: 16px; }
+    #header.menu-open { border-radius: 0 0 16px 16px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35); }
+}
+/* Comparación en móvil: la celda vacía de la cabecera no debe ocupar columna */
+@media only screen and (max-width: 767px) {
+    .compare__head .compare__cell[role="columnheader"]:empty { display: none; }
+}
+@media only screen and (max-width: 1199px) {
+    #header.menu-open .navbar { margin-bottom: 6px; }
+    #header.menu-open .navbar-nav { margin-bottom: 0 !important; }
+}
