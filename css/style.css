@@ -6342,3 +6342,57 @@ footer hr + .d-flex span { font-size: 0.95rem; }
     #header.menu-open .navbar { margin-bottom: 6px; }
     #header.menu-open .navbar-nav { margin-bottom: 0 !important; }
 }
+
+/* Comparación v2: columna "Con Compas" destacada y columna económica legible */
+.compare__table { margin-top: 0.5rem; }
+.compare__row { grid-template-columns: 1.1fr 1fr 1.2fr; gap: 0; padding: 0; align-items: stretch; }
+.compare__cell { padding: 1rem 1.25rem; display: flex; align-items: center; }
+.compare__label { padding-left: 0; font-weight: 500; }
+.compare__other { color: rgba(255, 255, 255, 0.8); }
+.compare__us { background: rgba(192, 146, 241, 0.14); color: #fff; font-weight: 600; }
+.compare__us::before { content: "✓"; color: var(--accent-color); margin-right: 0.6rem; font-weight: 700; }
+.compare__head .compare__us::before { content: none; }
+.compare__head .compare__us { background: var(--accent-color); color: var(--background-color); border-radius: 12px 12px 0 0; }
+.compare__head .compare__other { color: rgba(255, 255, 255, 0.8); }
+.compare__row:last-child .compare__us { border-radius: 0 0 12px 12px; }
+.compare__row:last-child { border-bottom: 0; }
+@media only screen and (max-width: 767px) {
+    .compare__row { grid-template-columns: 1fr 1fr; gap: 0; }
+    .compare__cell { padding: 0.75rem 0.85rem; font-size: 0.875rem; }
+    .compare__label { grid-column: 1 / -1; padding: 0.85rem 0 0.25rem; font-weight: 600; }
+    .compare__head { grid-template-columns: 1fr 1fr; }
+    .compare__head .compare__cell:empty { display: none; }
+    .compare__other { padding-left: 0; }
+    .compare__row:not(.compare__head) { border-bottom: 0; }
+    .compare__row:not(.compare__head) .compare__other { border-bottom: 1px solid rgba(192, 146, 241, 0.2); }
+    .compare__row:last-child .compare__us { border-radius: 0 0 12px 12px; }
+}
+
+/* Comparación v3 (móvil): filas apiladas, sin cabecera de columnas */
+@media only screen and (max-width: 767px) {
+    .compare { padding: 1.5rem 1.1rem; }
+    .compare__title { font-size: 1.4rem; }
+    .compare__lead { font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .compare__head { display: none; }
+    .compare__row:not(.compare__head) { grid-template-columns: 1fr; gap: 0; padding: 0.9rem 0; border-bottom: 1px solid rgba(192, 146, 241, 0.2); }
+    .compare__row:last-child { border-bottom: 0; }
+    .compare__label { grid-column: auto; padding: 0 0 0.4rem; font-size: 0.95rem; font-weight: 600; }
+    .compare__other { padding: 0 0 0.45rem !important; border-bottom: 0 !important; font-size: 0.85rem; color: rgba(255, 255, 255, 0.75); }
+    .compare__other::before { content: "Económica · "; opacity: 0.7; }
+    .compare__us { padding: 0.6rem 0.85rem; border-radius: 10px !important; font-size: 0.9rem; }
+    .compare__us::before { content: "✓"; }
+    .compare__foot { font-size: 0.95rem; }
+}
+
+/* Mantención en móvil: sin recortes (precio y botón se adaptan al ancho) */
+@media only screen and (max-width: 575px) {
+    .plan-mantencion { padding: 22px 18px !important; }
+    .plan-mantencion .price-text { font-size: 2.1rem !important; }
+    .plan-mantencion a.btn { width: 100% !important; white-space: normal !important; justify-content: center; text-align: center; }
+    .plan-mantencion .d-flex.flex-row.align-items-end span { white-space: normal !important; }
+}
+@media only screen and (max-width: 767px) {
+    .compare__row:not(.compare__head) .compare__label,
+    .compare__row:not(.compare__head) .compare__other { display: block; }
+    .compare__other::before { margin-right: 0.15rem; }
+}
