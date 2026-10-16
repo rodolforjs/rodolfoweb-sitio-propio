@@ -6308,3 +6308,16 @@ footer hr + .d-flex span { font-size: 0.95rem; }
 #header:has(.navbar-collapse.collapsing) {
     background: var(--background-color);
 }
+
+/* Móvil: el header va sólido (la transparencia es solo para desktop) y el menú abierto no depende de :has() */
+@media only screen and (max-width: 1199px) {
+    .glass-effect,
+    #header.glass-effect {
+        background: var(--background-color);
+    }
+}
+#header.menu-open {
+    background: var(--background-color) !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}

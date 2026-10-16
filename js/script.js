@@ -171,3 +171,14 @@ $(document).ready(function () {
     });
 });
 
+
+// Header: al abrir el menú móvil se marca con .menu-open (fondo sólido) sin depender de :has()
+(function () {
+    document.addEventListener('DOMContentLoaded', function () {
+        var nav = document.getElementById('navbarNav');
+        var header = document.getElementById('header');
+        if (!nav || !header) return;
+        nav.addEventListener('show.bs.collapse', function () { header.classList.add('menu-open'); });
+        nav.addEventListener('hidden.bs.collapse', function () { header.classList.remove('menu-open'); });
+    });
+})();
