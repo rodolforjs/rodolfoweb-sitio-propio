@@ -6285,3 +6285,26 @@ footer hr + .d-flex span { font-size: 0.95rem; }
     .compare__head .compare__label { display: none; }
     .compare__cell { font-size: 0.875rem; }
 }
+
+/* Header 20% más compacto y fondo más transparente al hacer scroll (2026-10-15).
+   La transparencia va en el fondo (no en opacity) para que el texto del menú no se apague. */
+@media only screen and (min-width: 1200px) {
+    #header .navbar { zoom: 0.8; }
+}
+@media only screen and (max-width: 1199px) {
+    #header .navbar { margin: 19px 0; }
+    .logo-container { width: 102px; }
+}
+.glass-effect {
+    background: rgba(1, 2, 69, 0.72);
+    opacity: 1;
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+}
+#header.glass-effect {
+    background: rgba(1, 2, 69, 0.72);
+}
+#header:has(.navbar-collapse.show),
+#header:has(.navbar-collapse.collapsing) {
+    background: var(--background-color);
+}
