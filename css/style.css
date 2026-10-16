@@ -6261,8 +6261,8 @@ main .section:has(.sub-heading.position-absolute):not(.bg-image) {
 @media only screen and (max-width: 767px) {
     .footer-links__logo { display: none; }
 }
-.footer-links__mail { color: var(--text-color); font-size: 1rem; font-weight: 500; overflow-wrap: anywhere; }
-.footer-links__mail:hover { color: var(--accent-color); }
+.footer-links__mail { color: var(--text-color-2); font-size: 0.95rem; font-weight: 400; overflow-wrap: anywhere; }
+.footer-links__mail:hover { color: var(--text-color); }
 
 /* Footer: CTA superior 15% más chico y barra legal con el mismo tamaño que el resto del footer */
 @media only screen and (min-width: 600px) {
