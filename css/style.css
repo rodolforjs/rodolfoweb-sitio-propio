@@ -6639,3 +6639,9 @@ p { font-size: 1rem; }
     .case-slide__actions .btn { flex: 1 1 0; }
     .case-slider__nav { display: none; }
 }
+
+/* Dibujo del hero en las páginas de caso: más chico que en el inicio */
+.case-art svg { max-width: 300px; margin-left: auto; }
+@media only screen and (max-width: 991px) {
+    .case-art svg { max-width: 220px; margin: 0 auto; }
+}
