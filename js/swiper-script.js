@@ -3,7 +3,7 @@ $(function () {
         autoplay: {
             delay: 3000
         },
-        speed: 2000,
+        speed: 1700,
         slidesPerView: 1,
         slidesPerGroup: 1,
         spaceBetween: 10,
@@ -36,7 +36,7 @@ $(function () {
         autoplay: {
             delay: 3000
         },
-        speed: 2000,
+        speed: 1700,
         slidesPerView: 3.5,
         slidesPerGroup: 1,
         spaceBetween: 10,
@@ -67,7 +67,7 @@ $(function () {
         autoplay: {
             delay: 3000
         },
-        speed: 2000,
+        speed: 1700,
         slidesPerView: 1,
         slidesPerGroup: 1,
         spaceBetween: 10,
