@@ -6648,3 +6648,39 @@ p { font-size: 1rem; }
 
 /* Comparación: tarjeta negra, igual que la del CTA final */
 .compare { background: #141414; border-color: rgba(255, 255, 255, 0.08); }
+
+/* ==========================================================
+   Movimiento de entrada unificado (2026-10-16)
+   Un solo efecto para todo el contenido: fundido con subida corta (20px), 0.4 s, sin
+   escalones largos. Quedan igual: los hero (texto y dibujos), los círculos animados
+   (footer y similares) y la sección "Textual Showcase".
+   Los bloques altos (planes, comparación, tarjeta CTA, footer) aparecen sin desplazamiento.
+   ========================================================== */
+@keyframes cs-reveal {
+    from { opacity: 0; transform: translate3d(0, 20px, 0); }
+    to { opacity: 1; transform: none; }
+}
+.section:not(.bg-image):not(.textual-showcase-section):not(.sec-planes):not(.sec-compare):not(.sec-cta):not(footer .section) .scrollanimation {
+    animation-name: cs-reveal !important;
+    animation-duration: 0.4s !important;
+    animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1) !important;
+}
+.section:not(.bg-image):not(.textual-showcase-section):not(.sec-planes):not(.sec-compare):not(.sec-cta):not(footer .section) .scrollanimation[class*="adl-"] {
+    animation-delay: 0.08s !important;
+}
+.sec-planes .scrollanimation,
+.sec-compare .scrollanimation,
+.sec-cta .scrollanimation,
+.compare.scrollanimation,
+footer .scrollanimation {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+    .scrollanimation {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
