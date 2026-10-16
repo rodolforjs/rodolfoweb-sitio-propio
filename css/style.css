@@ -6547,7 +6547,7 @@ p { font-size: 1rem; }
     .cta-card .row { margin: 0; padding: 0 !important; }
     .cta-card .row > .col-2 { display: none; }
     .cta-card .row > .col-8 { width: 100%; margin: 0 !important; padding: 0; }
-    .cta-card p br { display: none; }
+    .cta-card p { display: none; }
     .cta-card .btn { width: 100%; max-width: 320px; text-align: center; }
     .cta-card .btn.cta { width: 100%; max-width: 320px; }
 }
