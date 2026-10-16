@@ -6426,7 +6426,7 @@ footer hr + .d-flex span { font-size: 0.95rem; }
     outline: none;
     box-shadow: none;
     transform: none;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.2;
     text-decoration: none;
@@ -6500,4 +6500,35 @@ footer hr + .d-flex span { font-size: 0.95rem; }
     opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none;
+}
+
+/* ==========================================================
+   Escala tipográfica estándar (2026-10-16)
+   Escritorio / móvil (≤1024px). Los títulos decorativos de fondo (.sub-heading)
+   y los efectos del hero se mantienen como pieza expresiva.
+   h1 hero 64/36 · h2 48/30 · h3 40/26 · h4 28/20 · h5 20/18 · h6 16/14
+   cuerpo 16/16 · botones 16/16 · precio 36/36
+   ========================================================== */
+h1 { font-size: 3.5rem; }
+h2 { font-size: 3rem; }
+h3 { font-size: 2.5rem; }
+h4 { font-size: 1.75rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+p { font-size: 1rem; }
+.hero-gf__title { font-size: clamp(2.25rem, 4.4vw, 4rem); }
+.hero-gf__lead { font-size: 1.125rem; }
+.price-text, .sec-planes .plan-card .price-text { font-size: 2.25rem; }
+.compare__title { font-size: clamp(1.375rem, 2.2vw, 1.75rem); }
+@media only screen and (max-width: 1024px) {
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 1.875rem; }
+    h3 { font-size: 1.625rem; }
+    h4 { font-size: 1.25rem; }
+    h5 { font-size: 1.125rem; }
+    h6 { font-size: 0.875rem; }
+    p { font-size: 1rem; }
+    .btn { font-size: 16px !important; }
+    .hero-gf__lead { font-size: 1.0625rem; }
+    .price-text, .sec-planes .plan-card .price-text { font-size: 2.25rem; }
 }
