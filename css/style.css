@@ -6533,14 +6533,14 @@ p { font-size: 1rem; }
     .price-text, .sec-planes .plan-card .price-text { font-size: 2.25rem; }
 }
 
-/* CTA final en móvil: tarjeta con la paleta del sitio, texto a ancho completo,
+/* CTA final en móvil: tarjeta negra como en escritorio, texto a ancho completo,
    sin columnas vacías ni flecha suelta, botones apilados al mismo ancho */
 @media only screen and (max-width: 767px) {
     .cta-card {
         padding: 2.5rem 1.5rem !important;
         gap: 1.5rem !important;
-        background: var(--color-1);
-        border: 1px solid rgba(192, 146, 241, 0.35);
+        background: #141414;
+        border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 20px !important;
     }
     .cta-card .cta-text { font-size: 1.75rem; line-height: 1.15 !important; }
