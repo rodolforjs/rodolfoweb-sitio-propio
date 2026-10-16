@@ -6407,3 +6407,97 @@ footer hr + .d-flex span { font-size: 0.95rem; }
     .accordion .accordion-button { font-size: 18px; line-height: 1.35; padding-block: 1rem; gap: 0.75rem; }
     .accordion .accordion-body { font-size: 15px; }
 }
+
+/* ==========================================================
+   Sistema de botones (2026-10-16)
+   Un solo radio, una sola transición y un solo patrón de hover:
+   - Primario   .btn-accent            relleno lavanda, texto oscuro. Acción principal de la sección.
+   - Secundario .btn-accent-3 (.cta)   contorno lavanda, texto lavanda. Acción de apoyo.
+   - Sobre claro .btn-on-light         relleno oscuro, texto blanco. Para fondos lavanda/claros.
+   Sin zoom, sin barrido en diagonal, sin sombras en hover. El ancho lo define el layout, no el botón.
+   ========================================================== */
+.btn.btn-accent,
+.btn.btn-accent-3,
+.btn.btn-on-light {
+    min-height: 46px;
+    padding: 10px 24px;
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    outline: none;
+    box-shadow: none;
+    transform: none;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+    overflow: visible;
+    transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+.btn.btn-accent::before,
+.btn.btn-accent-3::before { content: none; }
+
+/* Primario */
+.btn.btn-accent,
+.sec-planes .bg-accent-color-4 .plan-cta .btn {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--background-color);
+}
+.btn.btn-accent:hover,
+.btn.btn-accent:focus-visible,
+.sec-planes .bg-accent-color-4 .plan-cta .btn:hover {
+    background: #E4D0FA;
+    border-color: #E4D0FA;
+    color: var(--background-color);
+    box-shadow: none;
+}
+.btn.btn-accent i { color: inherit; }
+
+/* Planes: mismo radio que el resto (antes eran píldora) */
+.sec-planes .plan-cta .btn { border-radius: 10px; }
+
+/* Secundario */
+.btn.btn-accent-3,
+.btn.btn-accent-3.cta {
+    background: transparent;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    outline: none;
+}
+.btn.btn-accent-3:hover,
+.btn.btn-accent-3.cta:hover,
+.btn.btn-accent-3:focus-visible {
+    background: rgba(192, 146, 241, 0.16);
+    border-color: var(--accent-color);
+    color: var(--text-color);
+    transform: none;
+    box-shadow: none;
+}
+
+/* Sobre fondo claro/lavanda */
+.btn.btn-on-light {
+    background: var(--background-color);
+    border-color: var(--background-color);
+    color: var(--text-color);
+}
+.btn.btn-on-light:hover,
+.btn.btn-on-light:focus-visible {
+    background: var(--color-1);
+    border-color: var(--color-1);
+    color: var(--text-color);
+}
+
+/* Foco visible y estado deshabilitado, iguales en todos */
+.btn.btn-accent:focus-visible,
+.btn.btn-accent-3:focus-visible,
+.btn.btn-on-light:focus-visible {
+    outline: 2px solid var(--text-color);
+    outline-offset: 3px;
+}
+.btn.btn-accent:disabled,
+.btn.btn-accent-3:disabled,
+.btn.btn-accent[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
