@@ -6645,3 +6645,6 @@ p { font-size: 1rem; }
 @media only screen and (max-width: 991px) {
     .case-art svg { max-width: 220px; margin: 0 auto; }
 }
+
+/* Comparación: tarjeta negra, igual que la del CTA final */
+.compare { background: #141414; border-color: rgba(255, 255, 255, 0.08); }
